@@ -1,3 +1,8 @@
 /gollum/latest_changes https://dn42.tk/gollum/latest_changes
-/gollum/history/* https://dn42.tk/gollum/history/:splat
 /gollum/commit/* https://dn42.tk/gollum/commit/:splat
+/gollum/history/:a/index.html https://dn42.tk/gollum/history/:a/
+/gollum/history/:a/:b/index.html https://dn42.tk/gollum/history/:a/:b/
+/gollum/history/:a/:b/:c/index.html https://dn42.tk/gollum/history/:a/:b/:c/
+/gollum/history/:a/:b/:c/:d/index.html https://dn42.tk/gollum/history/:a/:b/:c/:d/
+/gollum/history/:a/:b/:c/:d/:e/index.html https://dn42.tk/gollum/history/:a/:b/:c/:d/:e/
+/gollum/history/:a/:b/:c/:d/:e/:f/index.html https://dn42.tk/gollum/history/:a/:b/:c/:d/:e/:f/
