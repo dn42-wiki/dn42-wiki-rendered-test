@@ -1,0 +1,3 @@
+/gollum/latest_changes https://dn42.tk/gollum/latest_changes
+/gollum/history/* https://dn42.tk/gollum/history/:splat
+/gollum/commit/* https://dn42.tk/gollum/commit/:splat
