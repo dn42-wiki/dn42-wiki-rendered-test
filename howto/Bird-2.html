@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/Bird.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/app-309be032396e783b13a47df58f389b7c8e11c2b2d42640560b874f677c25f6e5.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/print-512498c368be0d3fb1ba105dfa84289ae48380ec9fcbef948bd4e23b0b095bfb.css" media="print">
+
+  <link rel="stylesheet" type="text/css" href="../custom.css" media="all">
+  
+
+  <script>
+  var criticMarkup = '';
+	var baseUrl = '';
+  var showLocalTime = false;
+	var uploadDest = 'uploads';
+	var perPageUploads = '';
+	if (perPageUploads == 'true') {
+	  uploadDest = uploadDest + window.location.pathname.replace(/.*gollum\/[-\w]+\//, "/").replace(/\.[^/.]+$/, "").replace(baseUrl, "")
+	}
+	  var pageFullPath = 'howto/Bird.md';
+    var pageFormat   = 'markdown';
+
+  </script>
+  <script src="../gollum/assets/app-f05401ee374f0c7f48fc2bc08e30b4f4db705861fd5895ed70998683b383bfb5.js" type="text/javascript"></script>
+  
+
+  <title>Bird</title>
+</head>
+<body>
+<div class="container-lg clearfix">
+<div id="wiki-wrapper" class="page">
+<div id="head">
+	<nav class="TableObject
+            actions
+            border-bottom
+            border-md-0
+            p-2
+            pt-lg-4
+            px-lg-0
+            overflow-x-scroll">
+  <div class="TableObject-item hide-lg hide-xl">
+    <details class="details-reset details-overlay">
+      <summary class="btn btn-invisible" aria-haspopup="true">
+        <span aria-label="Open menu">☰</span>
+      </summary>
+    
+      <div class="SelectMenu mx-sm-2">
+        <div class="SelectMenu-modal">
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Current Page</h2>
+            <div>Bird</div>
+          </div>
+    
+            <a
+              class="SelectMenu-item"
+              href="../gollum/history/howto/Bird.html"
+              role="menuitem"
+            >
+              <span>History</span>
+            </a>
+    
+    
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Main Menu</h2>
+          </div>
+    
+          <div class="SelectMenu-list">
+            <a class="SelectMenu-item" role="menuitem" href="../index.html">
+              Home
+            </a>
+    
+              <a class="SelectMenu-item" role="menuitem" href="../gollum/overview.html">
+                Overview
+              </a>
+    
+              <a
+                class="SelectMenu-item"
+                href="../gollum/latest_changes.html"
+                role="menuitem"
+              >
+                Latest Changes
+              </a>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <a class="btn btn-sm" id="minibutton-home" href="../index.html">
+      Home
+    </a>
+  </div>
+
+  <div
+    class="TableObject-item TableObject-item--primary px-2"
+    
+  >
+    <form class="search-form" action="http://127.0.0.1:4567/gollum/search" method="get" id="search-form">
+    	<input type="text" class="form-control input-block" name="q" id="search-query" placeholder="Search" aria-label="Search site" autocomplete="off">
+    </form>  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/overview.html"
+          id="minibutton-overview"
+        >
+          Overview
+        </a>
+
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/latest_changes.html"
+          id="minibutton-latest-changes"
+        >
+          Latest Changes
+        </a>
+    </div>
+  </div>
+
+  <div class="TableObject-item px-2">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm hide-sm hide-md"
+          href="../gollum/history/howto/Bird.md/index.html"
+          id="minibutton-history"
+        >
+          History
+        </a>
+
+    </div>
+  </div>
+
+</nav>
+
+</div>
+
+<div id="wiki-content" class="px-2 px-lg-0">
+  <h1 class="header-title text-center text-md-left pt-4">
+    Bird
+  </h1>
+	<div class="breadcrumb"><nav aria-label="Breadcrumb"><ol>
+<li class="breadcrumb-item"><a href="../gollum/overview/howto/index.html">howto</a></li>
+</ol></nav></div>
+
+	<div class="has-header has-footer has-sidebar has-rightbar">
+	  <div id="wiki-body" class="gollum-markdown-content">
+	    <div id="wiki-header" class="gollum-markdown-content">
+	      <div id="header-content" class="markdown-body">
+	        <p><a href="../index.html" rel="nofollow"><img src="../dn42.png" alt="dn42" /></a></p>
+
+	      </div>
+	    </div>
+	    <div class="main-content clearfix container-lg">
+	      <div class="markdown-body  float-md-left col-md-9" >
+	        
+	        <p>Bird is a commonly used BGP daemon.  This page provides configuration and help to run Bird for dn42.
+Compared to quagga, bird supports multiple routing tables, which is useful, if you also plan to peer with other federated networks such as freifunk. In the following a working configuration for dn42 is shown. If you 
+want to learn the practical details behind routing protocols in bird, see the following <a href="https://github.com/knorrie/network-examples">guide</a></p>
+
+<h1><a class="anchor" id="debian" href="#debian"></a>Debian</h1>
+
+<p>In the Debian release cycle the bird packages may become outdated at times, if that is the case you should use the official bird package repository maintained by the developers of nic.cz.</p>
+
+<p>This is not necessary for Debian Stretch, which currently ships the most recent version (1.6.3) in this repositories.</p>
+
+<pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"deb http://deb.debian.org/debian buster-backports main"</span> <span class="o">&gt;</span> /etc/apt/sources.list.d/buster-backports.list
+apt update
+apt <span class="nb">install </span>bird</code></pre>
+
+<h1><a class="anchor" id="example-configuration" href="#example-configuration"></a>Example configuration</h1>
+
+<p>Note: This file covers the configuration of Bird 1.x. For an example configuration of Bird 2.x see <a href="Bird2.html">howto/Bird2</a></p>
+
+<ul>
+<li>Replace <code>&lt;AS&gt;</code> with your Autonomous System Number (only the digits)</li>
+<li>Replace <code>&lt;GATEWAY_IP&gt;</code> with your gateway ip (the internal dn42 ip address you use on the host, where dn42 is running)</li>
+<li>Replace <code>&lt;SUBNET&gt;</code> with your registered dn42 subnet</li>
+<li>Replace <code>&lt;PEER_IP&gt;</code> with the ip of your peer who is connected with you using your favorite vpn protocol (openvpn, ipsec, tinc, ...)</li>
+<li>Replace <code>&lt;PEER_AS&gt;</code> the Autonomous System Number of your peer (only the digits)</li>
+<li>Replace <code>&lt;PEER_NAME&gt;</code> a self chosen name for your peer</li>
+</ul>
+
+<h2><a class="anchor" id="ipv6" href="#ipv6"></a>IPv6</h2>
+
+<pre class="highlight"><code>#/etc/bird/bird6.conf
+protocol device {
+  scan time 10;
+}
+
+# local configuration
+######################
+
+include "/etc/bird/local6.conf";
+
+# filter helpers
+#################
+
+##include "/etc/bird/filter6.conf";
+
+# Kernel routing tables
+########################
+
+
+/*
+    krt_prefsrc defines the source address for outgoing connections.
+    On Linux, this causes the "src" attribute of a route to be set.
+
+    Without this option outgoing connections would use the peering IP which
+    would cause packet loss if some peering disconnects but the interface
+    is still available. (The route would still exist and thus route through
+    the TUN/TAP interface but the VPN daemon would simply drop the packet.)
+*/
+protocol kernel {
+  scan time 20;
+  import none;
+  export filter {
+    if source = RTS_STATIC then reject;
+    krt_prefsrc = OWNIP;
+    accept;
+  };
+}
+
+# static routes
+################
+
+protocol static {
+  route &lt;SUBNET&gt; reject;
+  import all;
+  export none;
+}
+
+template bgp dnpeers {
+  local as OWNAS;
+  path metric 1;
+  import keep filtered;
+  import filter {
+    if is_valid_network() &amp;&amp; !is_self_net() then {
+      accept;
+    }
+    reject;
+  };
+  export filter {
+    if is_valid_network() &amp;&amp; source ~ [RTS_STATIC, RTS_BGP] then {
+      accept;
+    }
+    reject;
+  };
+  import limit 1000 action block;
+}
+
+include "/etc/bird/peers6/*";</code></pre>
+
+<pre class="highlight"><code># /etc/bird/local6.conf
+# should be a unique identifier, use same id as for ipv4
+router id &lt;GATEWAY_IP&gt;;
+
+define OWNAS =  &lt;AS&gt;;
+define OWNIP = &lt;GATEWAY_IP&gt;;
+
+function is_self_net() {
+  return net ~ [&lt;SUBNET&gt;+];
+}
+
+function is_valid_network() {
+  return net ~ [
+    fd00::/8{44,64} # ULA address space as per RFC 4193
+  ];
+}</code></pre>
+
+<pre class="highlight"><code># /etc/bird/peers6/&lt;PEER_NAME&gt;
+protocol bgp &lt;PEER_NAME&gt; from dnpeers {
+  neighbor &lt;PEERING_IP&gt; as &lt;PEER_AS&gt;;
+  # if you use link-local ipv6 addresses for peering using the following
+  # neighbor &lt;PEERING_IP&gt; % '&lt;INTERFACE_NAME&gt;' as &lt;PEER_AS&gt;;
+};</code></pre>
+
+<h3><a class="anchor" id="ipv4" href="#ipv4"></a>IPv4</h3>
+
+<pre class="highlight"><code># /etc/bird/bird.conf
+# Device status
+protocol device {
+  scan time 10; # recheck every 10 seconds
+}
+
+protocol static {
+  # Static routes to announce your own range(s) in dn42
+  route &lt;SUBNET&gt; reject;
+  import all;
+  export none;
+};
+
+# local configuration
+######################
+
+# keeping router specific in a seperate file, 
+# so this configuration can be reused on multiple routers in your network
+include "/etc/bird/local4.conf";
+
+# filter helpers
+#################
+
+##include "/etc/bird/filter4.conf";
+
+# Kernel routing tables
+########################
+
+/*
+    krt_prefsrc defines the source address for outgoing connections.
+    On Linux, this causes the "src" attribute of a route to be set.
+
+    Without this option outgoing connections would use the peering IP which
+    would cause packet loss if some peering disconnects but the interface
+    is still available. (The route would still exist and thus route through
+    the TUN/TAP interface but the VPN daemon would simply drop the packet.)
+*/
+protocol kernel {
+  scan time 20;
+  import none;
+  export filter {    
+    if source = RTS_STATIC then reject;
+    krt_prefsrc = OWNIP;
+    accept;
+  };
+};
+# DN42
+#######
+
+template bgp dnpeers {
+  local as OWNAS;
+  # metric is the number of hops between us and the peer
+  path metric 1;
+  # this lines allows debugging filter rules
+  # filtered routes can be looked up in birdc using the "show route filtered" command
+  import keep filtered;
+  import filter {
+    # accept every subnet, except our own advertised subnet
+    # filtering is important, because some guys try to advertise routes like 0.0.0.0
+    if is_valid_network() &amp;&amp; !is_self_net() then {
+      accept;
+    }
+    reject;
+  };
+  export filter {
+    # here we export the whole net
+    if is_valid_network() &amp;&amp; source ~ [RTS_STATIC, RTS_BGP] then {
+      accept;
+    }
+    reject;
+  };
+  import limit 1000 action block;
+  #source address OWNIP;
+};
+
+include "/etc/bird/peers4/*";</code></pre>
+
+<pre class="highlight"><code>#/etc/bird/local4.conf
+# should be a unique identifier, &lt;GATEWAY_IP&gt; is what most people use.
+router id &lt;GATEWAY_IP&gt;;
+
+define OWNAS =  &lt;AS&gt;;
+define OWNIP = &lt;GATEWAY_IP&gt;;
+
+function is_self_net() {
+  return net ~ [&lt;SUBNET&gt;+];
+}
+
+function is_valid_network() {
+  return net ~ [
+    172.20.0.0/14{21,29}, # dn42
+    172.20.0.0/24{28,32}, # dn42 Anycast
+    172.21.0.0/24{28,32}, # dn42 Anycast
+    172.22.0.0/24{28,32}, # dn42 Anycast
+    172.23.0.0/24{28,32}, # dn42 Anycast
+    172.31.0.0/16+,       # ChaosVPN
+    10.100.0.0/14+,       # ChaosVPN
+    10.127.0.0/16{16,32}, # neonetwork
+    10.0.0.0/8{15,24}     # Freifunk.net
+  ];
+}</code></pre>
+
+<pre class="highlight"><code># /etc/bird/peers4/&lt;PEER_NAME&gt;
+protocol bgp &lt;PEER_NAME&gt; from dnpeers {
+  neighbor &lt;PEERING_IP&gt; as &lt;PEER_AS&gt;;
+};</code></pre>
+
+<h1><a class="anchor" id="bird-communities" href="#bird-communities"></a>Bird communities</h1>
+
+<p>Communities can be used to prioritize traffic based on different flags, in DN42 we are using communities to prioritize based on latency, bandwidth and encryption. It is really easy to get started with communities and we encourage all of you to get the basic configuration done and to mark your peerings with the correct flags for improved routing.
+More information can be found <a href="Bird-communities.html">here</a>. </p>
+
+<h1><a class="anchor" id="route-origin-authorization" href="#route-origin-authorization"></a>Route Origin Authorization</h1>
+
+<p>Route Origin Authorizations should be used in BIRD to authenticate prefix announcements. These check the originating AS and validate that they are allowed to advertise a prefix. </p>
+
+<h2><a class="anchor" id="roa-tables" href="#roa-tables"></a>ROA Tables</h2>
+
+<p>The ROA table can be generated from the registry directly or you can use the following pre-built ROA tables for BIRD:</p>
+
+<p>ROA files generated by <a href="https://git.burble.com/burble.dn42/dn42regsrv">dn42regsrv</a> are available from burble.dn42:</p>
+
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th> IPv4/IPv6 </th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://dn42.burble.com/roa/dn42_roa_46.json">https://dn42.burble.com/roa/dn42_roa_46.json</a>  </td>
+<td> Both </td>
+<td>JSON format for use with RPKI</td>
+</tr>
+<tr>
+<td>
+<a href="https://dn42.burble.com/roa/dn42_roa_bird1_46.conf">https://dn42.burble.com/roa/dn42_roa_bird1_46.conf</a>  </td>
+<td> Both </td>
+<td>Bird1 format</td>
+</tr>
+<tr>
+<td>
+<a href="https://dn42.burble.com/roa/dn42_roa_bird1_4.conf">https://dn42.burble.com/roa/dn42_roa_bird1_4.conf</a>  </td>
+<td> IPv4 Only </td>
+<td>Bird1 format</td>
+</tr>
+<tr>
+<td>
+<a href="https://dn42.burble.com/roa/dn42_roa_bird1_6.conf">https://dn42.burble.com/roa/dn42_roa_bird1_6.conf</a>  </td>
+<td> IPv6 Only </td>
+<td>Bird1 format</td>
+</tr>
+<tr>
+<td>
+<a href="https://dn42.burble.com/roa/dn42_roa_bird2_46.conf">https://dn42.burble.com/roa/dn42_roa_bird2_46.conf</a>  </td>
+<td> Both </td>
+<td>Bird2 format</td>
+</tr>
+<tr>
+<td>
+<a href="https://dn42.burble.com/roa/dn42_roa_bird2_4.conf">https://dn42.burble.com/roa/dn42_roa_bird2_4.conf</a>  </td>
+<td> IPv4 Only </td>
+<td>Bird2 format</td>
+</tr>
+<tr>
+<td>
+<a href="https://dn42.burble.com/roa/dn42_roa_bird2_6.conf">https://dn42.burble.com/roa/dn42_roa_bird2_6.conf</a>  </td>
+<td> IPv6 Only </td>
+<td>Bird2 format</td>
+</tr>
+</tbody>
+</table>
+
+<h3><a class="anchor" id="updating-roa-tables" href="#updating-roa-tables"></a>Updating ROA tables</h3>
+
+<p>You can add cron entries to periodically update the tables:</p>
+
+<pre class="highlight"><code>*/15 * * * * curl -sfSLR {-o,-z}/var/lib/bird/bird6_roa_dn42.conf https://dn42.burble.com/roa/dn42_roa_bird1_6.conf &amp;&amp; chronic birdc6 configure
+*/15 * * * * curl -sfSLR {-o,-z}/var/lib/bird/bird_roa_dn42.conf https://dn42.burble.com/roa/dn42_roa_bird1_4.conf &amp;&amp; chronic birdc configure</code></pre>
+
+<p>Debian version:</p>
+
+<pre class="highlight"><code>*/15 * * * * curl -sfSLR -o/var/lib/bird/bird6_roa_dn42.conf -z/var/lib/bird/bird6_roa_dn42.conf https://dn42.burble.com/roa/dn42_roa_bird1_6.conf &amp;&amp; /usr/sbin/birdc6 configure
+*/15 * * * * curl -sfSLR -o/var/lib/bird/bird_roa_dn42.conf -z/var/lib/bird/bird_roa_dn42.conf https://dn42.burble.com/roa/dn42_roa_bird1_4.conf &amp;&amp; /usr/sbin/birdc configure</code></pre>
+
+<p>then create the directory to make sure curls can save the files:</p>
+
+<pre class="highlight"><code>mkdir -p /var/lib/bird/</code></pre>
+
+<h3><a class="anchor" id="use-rpki-roa-in-bird2" href="#use-rpki-roa-in-bird2"></a>Use RPKI ROA in bird2</h3>
+
+<ul>
+<li>Download  gortr</li>
+</ul>
+
+<p><code>https://github.com/cloudflare/gortr/releases</code></p>
+
+<ul>
+<li>Run gortr.</li>
+</ul>
+
+<pre class="highlight"><code>./gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json</code></pre>
+
+<ul>
+<li>Run with docker</li>
+</ul>
+
+<p><code>docker pull cloudflare/gortr</code></p>
+
+<pre class="highlight"><code>docker run --name dn42rpki -p 8282:8282 --restart=always -d cloudflare/gortr -verify=false -checktime=false -cache=https://dn42.burble.com/roa/dn42_roa_46.json</code></pre>
+
+<ul>
+<li>Add this to your bird configure file,other ROA protocol must removed.</li>
+</ul>
+
+<pre class="highlight"><code>protocol rpki rpki_dn42{
+  roa4 { table dn42_roa; };
+  roa6 { table dn42_roa_v6; };
+
+  remote "&lt;your rpki server ip or domain&gt;" port 8282;
+
+  retry keep 90;
+  refresh keep 900;
+  expire keep 172800;
+}</code></pre>
+
+<h2><a class="anchor" id="filter-configuration" href="#filter-configuration"></a>Filter configuration</h2>
+
+<p>In your import filter add the following to reject invalid routes:</p>
+
+<pre class="highlight"><code>if (roa_check(dn42_roa, net, bgp_path.last) != ROA_VALID) then {
+   print "[dn42] ROA check failed for ", net, " ASN ", bgp_path.last;
+   reject;
+}</code></pre>
+
+<p>Also, define your ROA table with:</p>
+
+<pre class="highlight"><code>roa table dn42_roa {
+    include "/var/lib/bird/bird_roa_dn42.conf";
+};</code></pre>
+
+<p><strong>NOTE</strong>: Make sure you setup ROA checks for both bird and bird6 (for IPv6).</p>
+
+<h1><a class="anchor" id="useful-bird-commmands" href="#useful-bird-commmands"></a>Useful bird commmands</h1>
+
+<p>bird can be remote controlled via the <code>birdc</code> command. Here is a list of useful bird commands:</p>
+
+<pre class="highlight"><code>$ birdc
+BIRD 1.4.5 ready.
+bird&gt; configure # reload configuration
+Reading configuration from /etc/bird.conf
+Reconfigured
+bird&gt; show  ? # Completions work either by pressing tab or pressing '?'
+show bfd ...                                   Show information about BFD protocol
+show interfaces                                Show network interfaces
+show memory                                    Show memory usage
+show ospf ...                                  Show information about OSPF protocol
+show protocols [&lt;protocol&gt; | "&lt;pattern&gt;"]      Show routing protocols
+show roa ...                                   Show ROA table
+show route ...                                 Show routing table
+show static [&lt;name&gt;]                           Show details of static protocol
+show status                                    Show router status
+show symbols ...                               Show all known symbolic names
+bird&gt; show protocols # this command shows your peering status
+name     proto    table    state  since       info
+device1  Device   master   up     07:20:25    
+kernel1  Kernel   master   up     07:20:25    
+chelnok  BGP      master   up     07:20:29    Established   
+hax404   BGP      master   up     07:20:26    Established     
+static1  Static   master   up     07:20:25
+bird&gt; show protocols all chelnok # show verbose peering status for peering with chelnok
+bird&gt; show route for 172.22.141.181 # show possible routes to internal.dn42
+172.22.141.0/24    via 172.23.67.1 on tobee [tobee 07:20:30] * (100) [AS64737i]
+                   via 172.23.64.1 on chelnok [chelnok 07:20:29] (100) [AS64737i]
+                   via 172.23.136.65 on hax404 [hax404 07:20:26] (100) [AS64737i]
+bird&gt; show route filtered # shows routed filtered out by rules
+172.23.245.1/32    via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS76175i]
+172.22.247.128/32  via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS76175i]
+172.22.227.1/32    via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS76115i]
+172.23.196.75/32   via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS76115i]
+172.22.41.241/32   via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS76115i]
+172.22.249.4/30    via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS4242420002i]
+172.22.255.133/32  via 172.23.64.1 on chelnok [chelnok 21:26:18] * (100) [AS64654i]
+bird&gt; show route protocol &lt;somepeer&gt; # shows the route they export to you
+bird&gt; show route export &lt;somepeer&gt; # shows the route you export to someone
+...</code></pre>
+
+<h1><a class="anchor" id="external-links" href="#external-links"></a>External Links</h1>
+
+<ul>
+<li>detailed bird configuration from Mic92: <a href="https://github.com/Mic92/bird-dn42">https://github.com/Mic92/bird-dn42</a>
+</li>
+<li>more bird commands: <a href="https://bird.network.cz/?get_doc&amp;v=20&amp;f=bird-4.html">https://bird.network.cz/?get_doc&amp;v=20&amp;f=bird-4.html</a>
+</li>
+</ul>
+
+	      </div>
+          <div id="wiki-sidebar" class="Box Box--condensed float-md-left col-md-3">
+	        <div id="sidebar-content" class="gollum-markdown-content markdown-body px-4">
+	          <ul>
+<li>
+<a href="../Home.html" rel="nofollow">Home</a>
+
+<ul>
+<li><a href="Getting-Started.html" rel="nofollow">Getting Started</a></li>
+<li><a href="Registry-Authentication.html" rel="nofollow">Registry Authentication</a></li>
+<li><a href="Address-Space.html" rel="nofollow">Address Space</a></li>
+<li><a href="Bird-communities.html" rel="nofollow">BGP communities</a></li>
+<li><a href="../FAQ.html" rel="nofollow">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<p>How-To</p>
+
+<ul>
+<li><a href="wireguard.html" rel="nofollow">Wireguard</a></li>
+<li><a href="openvpn.html" rel="nofollow">Openvpn</a></li>
+<li><a href="IPsec-with-PublicKeys.html" rel="nofollow">IPsec With Public Keys</a></li>
+<li><a href="tinc.html" rel="nofollow">Tinc</a></li>
+<li><a href="GRE-on-FreeBSD.html" rel="nofollow">GRE on FreeBSD</a></li>
+<li><a href="GRE-on-OpenBSD.html" rel="nofollow">GRE on OpenBSD</a></li>
+<li><a href="IPv6-Multicast.html" rel="nofollow">IPv6 Multicast (PIM-SM)</a></li>
+<li>
+<a href="Bird.html" rel="nofollow">Bird</a> / <a href="Bird2.html" rel="nofollow">Bird2</a>
+</li>
+<li><a href="Quagga.html" rel="nofollow">Quagga</a></li>
+<li><a href="OpenBGPD.html" rel="nofollow">OpenBGPD</a></li>
+<li><a href="mikrotik.html" rel="nofollow">Mikrotik RouterOS</a></li>
+<li><a href="EdgeOS-Config.html" rel="nofollow">EdgeRouter</a></li>
+<li><a href="Static-routes-on-Windows.html" rel="nofollow">Static routes on Windows</a></li>
+<li><a href="networksettings.html" rel="nofollow">Universal Network Requirements</a></li>
+<li><a href="vyos.html" rel="nofollow">VyOS</a></li>
+<li><a href="nixos.html" rel="nofollow">NixOS</a></li>
+</ul>
+</li>
+<li>
+<p>Services</p>
+
+<ul>
+<li><a href="../services/IRC.html" rel="nofollow">IRC</a></li>
+<li><a href="../services/Whois.html" rel="nofollow">Whois registry</a></li>
+<li><a href="../services/DNS.html" rel="nofollow">DNS</a></li>
+<li><a href="../services/Clearnet-Domains.html" rel="nofollow">Public DNS</a></li>
+<li><a href="../services/Looking-Glasses.html" rel="nofollow">Looking Glasses</a></li>
+<li><a href="../services/Automatic-Peering.html" rel="nofollow">Automatic Peering</a></li>
+<li><a href="../services/Repository-Mirrors.html" rel="nofollow">Repository Mirrors</a></li>
+<li><a href="../services/Distributed-Wiki.html" rel="nofollow">Distributed Wiki</a></li>
+<li><a href="../services/Certificate-Authority.html" rel="nofollow">Certificate Authority</a></li>
+<li><a href="../services/Route-Collector.html" rel="nofollow">Route Collector</a></li>
+</ul>
+</li>
+<li>
+<p>Internal</p>
+
+<ul>
+<li><a href="../internal/Internal-Services.html" rel="nofollow">Internal services</a></li>
+<li><a href="../internal/Interconnections.html" rel="nofollow">Interconnections</a></li>
+<li><a href="../internal/APIs.html" rel="nofollow">APIs</a></li>
+<li>
+<a href="../internal/ShowAndTell.html" rel="nofollow">Show and Tell</a><br />
+</li>
+<li><a href="../internal/Historical-Services.html" rel="nofollow">Historical services</a></li>
+</ul>
+</li>
+<li>
+<p>External Tools</p>
+
+<ul>
+<li><a href="https://paste.dn42.us/" rel="nofollow">Paste Board</a></li>
+<li><a href="https://git.dn42.dev/" rel="nofollow">Git Repositories</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="wiki-footer" class="gollum-markdown-content my-2">
+	    <div id="footer-content" class="Box Box-condensed markdown-body px-4">
+	      <p>Hosted by: <a href="mailto:xuu@sour.is" rel="nofollow">xuu</a>, <a href="mailto:nurtic-vibe@grmml.net" rel="nofollow">nurtic-vibe</a>, <a href="mailto:tom@xcv.vc" rel="nofollow">toBee</a>, <a href="mailto:dn42@burble.com" rel="nofollow">burble</a> | Accessible via: <a href="https://wiki.dn42/" rel="nofollow">dn42</a>, <a href="https://dn42.eu/" rel="nofollow">dn42.eu</a>, <a href="https://dn42.dev/" rel="nofollow">dn42.dev</a></p>
+
+	    </div>
+	  </div>
+
+
+	</div>
+
+
+	<div id="footer" class="pt-4">
+		  <p id="last-edit"><div class="dotted-spinner hidden"></div> <a id="page-info-toggle" data-pagepath="howto/Bird.md">When was this page last modified?</a></p>
+	</div>
+
+
+</div>
+
+<form name="rename" method="POST" action="http://127.0.0.1:4567/gollum/rename/howto/Bird.md">
+  <input type="hidden" name="rename"/>
+  <input type="hidden" name="message"/>
+</form>
+
+</div>
+</div>
+</body>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/Bird.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+</html>

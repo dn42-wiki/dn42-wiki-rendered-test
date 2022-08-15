@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/Quagga.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/app-309be032396e783b13a47df58f389b7c8e11c2b2d42640560b874f677c25f6e5.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/print-512498c368be0d3fb1ba105dfa84289ae48380ec9fcbef948bd4e23b0b095bfb.css" media="print">
+
+  <link rel="stylesheet" type="text/css" href="../custom.css" media="all">
+  
+
+  <script>
+  var criticMarkup = '';
+	var baseUrl = '';
+  var showLocalTime = false;
+	var uploadDest = 'uploads';
+	var perPageUploads = '';
+	if (perPageUploads == 'true') {
+	  uploadDest = uploadDest + window.location.pathname.replace(/.*gollum\/[-\w]+\//, "/").replace(/\.[^/.]+$/, "").replace(baseUrl, "")
+	}
+	  var pageFullPath = 'howto/Quagga.md';
+    var pageFormat   = 'markdown';
+
+  </script>
+  <script src="../gollum/assets/app-f05401ee374f0c7f48fc2bc08e30b4f4db705861fd5895ed70998683b383bfb5.js" type="text/javascript"></script>
+  
+
+  <title>Quagga</title>
+</head>
+<body>
+<div class="container-lg clearfix">
+<div id="wiki-wrapper" class="page">
+<div id="head">
+	<nav class="TableObject
+            actions
+            border-bottom
+            border-md-0
+            p-2
+            pt-lg-4
+            px-lg-0
+            overflow-x-scroll">
+  <div class="TableObject-item hide-lg hide-xl">
+    <details class="details-reset details-overlay">
+      <summary class="btn btn-invisible" aria-haspopup="true">
+        <span aria-label="Open menu">☰</span>
+      </summary>
+    
+      <div class="SelectMenu mx-sm-2">
+        <div class="SelectMenu-modal">
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Current Page</h2>
+            <div>Quagga</div>
+          </div>
+    
+            <a
+              class="SelectMenu-item"
+              href="../gollum/history/howto/Quagga.html"
+              role="menuitem"
+            >
+              <span>History</span>
+            </a>
+    
+    
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Main Menu</h2>
+          </div>
+    
+          <div class="SelectMenu-list">
+            <a class="SelectMenu-item" role="menuitem" href="../index.html">
+              Home
+            </a>
+    
+              <a class="SelectMenu-item" role="menuitem" href="../gollum/overview.html">
+                Overview
+              </a>
+    
+              <a
+                class="SelectMenu-item"
+                href="../gollum/latest_changes.html"
+                role="menuitem"
+              >
+                Latest Changes
+              </a>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <a class="btn btn-sm" id="minibutton-home" href="../index.html">
+      Home
+    </a>
+  </div>
+
+  <div
+    class="TableObject-item TableObject-item--primary px-2"
+    
+  >
+    <form class="search-form" action="http://127.0.0.1:4567/gollum/search" method="get" id="search-form">
+    	<input type="text" class="form-control input-block" name="q" id="search-query" placeholder="Search" aria-label="Search site" autocomplete="off">
+    </form>  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/overview.html"
+          id="minibutton-overview"
+        >
+          Overview
+        </a>
+
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/latest_changes.html"
+          id="minibutton-latest-changes"
+        >
+          Latest Changes
+        </a>
+    </div>
+  </div>
+
+  <div class="TableObject-item px-2">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm hide-sm hide-md"
+          href="../gollum/history/howto/Quagga.md/index.html"
+          id="minibutton-history"
+        >
+          History
+        </a>
+
+    </div>
+  </div>
+
+</nav>
+
+</div>
+
+<div id="wiki-content" class="px-2 px-lg-0">
+  <h1 class="header-title text-center text-md-left pt-4">
+    Quagga
+  </h1>
+	<div class="breadcrumb"><nav aria-label="Breadcrumb"><ol>
+<li class="breadcrumb-item"><a href="../gollum/overview/howto/index.html">howto</a></li>
+</ol></nav></div>
+
+	<div class="has-header has-footer has-sidebar has-rightbar">
+	  <div id="wiki-body" class="gollum-markdown-content">
+	    <div id="wiki-header" class="gollum-markdown-content">
+	      <div id="header-content" class="markdown-body">
+	        <p><a href="../index.html" rel="nofollow"><img src="../dn42.png" alt="dn42" /></a></p>
+
+	      </div>
+	    </div>
+	    <div class="main-content clearfix container-lg">
+	      <div class="markdown-body  float-md-left col-md-9" >
+	        
+	        <h1><a class="anchor" id="quagga" href="#quagga"></a>Quagga</h1>
+
+<p>Quagga is probably one of the oldest software router around.  It still works, of course, even though it has an unattractive configuration syntax (unfortunately inspired by  <a href="https://dn42.net/howto/IPsecWithPublicKeys/CiscoIOSExample">Cisco's IOS</a>) and has some small issues with IPv6.  But since it's so old, you will find a lot of configuration examples around.</p>
+
+<h2><a class="anchor" id="source-address-selection" href="#source-address-selection"></a>Source address selection</h2>
+
+<p>Use this in your <code>zebra.conf</code>:</p>
+
+<pre><code>route-map RM_SET_SRC permit 10
+  set src 172.22.XX.XX
+ip protocol bgp route-map RM_SET_SRC
+</code></pre>
+
+<p>Unfortunately, this is not possible with IPv6...</p>
+
+<h2><a class="anchor" id="important-bgp-commands" href="#important-bgp-commands"></a>Important bgp commands</h2>
+
+<p>To connect to bgpd use:</p>
+
+<pre><code>$ vtysh
+</code></pre>
+
+<p>Which provides an interactive interface.
+In this interface '?' can be used to list the available commands or subcommands.</p>
+
+<h2><a class="anchor" id="configure-quagga" href="#configure-quagga"></a>Configure Quagga</h2>
+
+<p>a minimal config would look like this:</p>
+
+<pre><code>vtysh&gt; configure terminal
+vtysh(config)&gt; router bgp &lt;your-asn&gt;
+vtysh(config-router)&gt; neighbor &lt;neighbor-ip&gt; remote-as &lt;neighbor-asn&gt;
+vtysh(config-router)&gt; neighbor &lt;neighbor-ip&gt; interface &lt;interface&gt;
+vtysh(config-router)&gt; exit
+vtysh(config)&gt; exit
+</code></pre>
+
+<h3><a class="anchor" id="ipv6" href="#ipv6"></a>IPv6</h3>
+
+<p>for IPv6 do something like</p>
+
+<pre><code>vtysh&gt; configure terminal
+vtysh(config)&gt; router bgp &lt;your-asn&gt;
+vtysh(config-router)&gt; neighbor &lt;neighbor-ip&gt; remote-as &lt;neighbor-asn&gt;
+vtysh(config-router)&gt; neighbor &lt;neighbor-ip&gt; interface &lt;interface&gt;
+vtysh(config-router)&gt; no neighbor &lt;neighbor-ip&gt; activate
+vtysh(config-router)&gt; address-family ipv6
+vtysh(config-router-af)&gt; neighbor &lt;neighbor-ip&gt; activate
+vtysh(config-router-af)&gt; exit
+vtysh(config-router)&gt; exit
+vtysh(config)&gt; exit
+</code></pre>
+
+<h3><a class="anchor" id="peer-groups-prefix-lists-and-such" href="#peer-groups-prefix-lists-and-such"></a>peer groups, prefix lists and such</h3>
+
+<p>If you want to use 'prefix-list' to filter some of the prefixes quagga is receiving, you can use a 'peer-group' instead of apply the prefix list to every neighbor. </p>
+
+<p>Define a peer group:</p>
+
+<pre><code>vtysh(config-router)&gt; neighbor &lt;peer-group-name&gt; peer-group
+</code></pre>
+
+<p>Apply to a neighbor:</p>
+
+<pre><code>vtysh(config-router)&gt; neighbor &lt;neighbor-ip&gt; peer-group &lt;name&gt;
+</code></pre>
+
+<p>Apply a prefix list for incoming prefixes to your peer group:</p>
+
+<pre><code>vtysh(config-router)&gt; neighbor &lt;peer-group-name&gt; prefix-list &lt;prefix-list-name&gt; in
+</code></pre>
+
+<h4><a class="anchor" id="example-filter-list" href="#example-filter-list"></a>Example filter list</h4>
+
+<pre><code>ip prefix-list vpn-in description BGP IPv4 import filter
+!old network:
+ip prefix-list vpn-in seq 5 permit 172.22.0.0/15 ge 22 le 28
+!new dn42 allocation:
+ip prefix-list vpn-in seq 10 permit 172.20.0.0/16 ge 22 le 28
+
+! Anycast /32s for Whois and DNS:
+ip prefix-list vpn-in seq 11 permit 172.22.0.43/32
+ip prefix-list vpn-in seq 12 permit 172.22.0.53/32
+
+ip prefix-list vpn-in seq 18 permit 192.175.48.0/24
+ip prefix-list vpn-in seq 20 deny 10.10.10.0/24
+ip prefix-list vpn-in seq 21 permit 10.0.0.0/8
+ip prefix-list vpn-in seq 30 permit 172.31.0.0/16
+ip prefix-list vpn-in seq 39 permit 100.64.0.0/10
+ip prefix-list vpn-in seq 40 permit 195.160.168.0/23
+ip prefix-list vpn-in seq 41 permit 91.204.4.0/22
+ip prefix-list vpn-in seq 43 permit 193.43.220.0/23
+ip prefix-list vpn-in seq 46 permit 83.133.178.0/23
+ip prefix-list vpn-in seq 47 permit 87.106.29.254/32
+ip prefix-list vpn-in seq 50 permit 85.25.246.16/28
+ip prefix-list vpn-in seq 51 permit 46.4.248.192/27
+ip prefix-list vpn-in seq 60 permit 94.45.224.0/19
+ip prefix-list vpn-in seq 70 permit 195.191.196.0/23
+ip prefix-list vpn-in seq 80 permit 80.244.241.224/27
+ip prefix-list vpn-in seq 90 permit 46.19.90.48/28
+ip prefix-list vpn-in seq 91 permit 46.19.90.96/28
+ip prefix-list vpn-in seq 110 permit 188.40.34.241/32
+ip prefix-list vpn-in seq 130 permit 37.1.89.192/26
+ip prefix-list vpn-in seq 140 permit 178.33.32.123/32
+ip prefix-list vpn-in seq 150 permit 87.98.246.19/32
+ip prefix-list vpn-in seq 1000 deny 0.0.0.0/0
+
+ipv6 prefix-list vpn-in seq 10 permit fd00::/8 ge 9
+ipv6 prefix-list vpn-in seq 15 deny any
+</code></pre>
+
+<h4><a class="anchor" id="example-filter-list-script" href="#example-filter-list-script"></a>Example filter list script</h4>
+
+<pre class="highlight"><code>#!/bin/bash
+
+vtysh -c 'conf t' -c "no ip prefix-list dn42"; #drop old prefix list
+
+while read pl
+do
+   vtysh -c 'conf t' -c "$pl"; #insert prefix list row by row
+done &lt; &lt;(curl -s https://ca.dn42.us/reg/filter.txt | grep -e  ^[0-9] | awk '{ print "ip prefix-list dn42 seq " $1 " " $2 " " $3 " ge " $4 " le " $5}' | sed "s_/\([0-9]\+\) ge \1_/\1_g;s_/\([0-9]\+\) le \1_/\1_g");
+vtysh -c "wr" #write new prefix list
+</code></pre>
+
+<h2><a class="anchor" id="show-bpg-session-status" href="#show-bpg-session-status"></a>show bpg session status</h2>
+
+<p>in this example:</p>
+
+<ul>
+<li>an active bgp session exists with peer 64713.</li>
+<li>no (vpn) connection at all exists with peer 64692</li>
+<li>a (vpn) connection with 4242421375 exists, but no bgp session</li>
+</ul>
+
+<pre class="highlight"><code>vtysh&gt; show ip bgp summary 
+BGP router identifier 172.22.100.254, local AS number 64698
+RIB entries 938, using 103 KiB of memory
+Peers 11, using 49 KiB of memory
+Peer groups 1, using 32 bytes of memory
+
+Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+172.22.92.247   4 64692       0       0        0    0    0 never    Connect
+...
+172.22.113.2    4 64713    2206     865        0    0    0 01:23:11      322
+....
+172.23.64.1     4 4242421375  0       0        0    0    0 never    Active
+fe80::deca:fbad 4 64699     902     694        0    0    0 01:23:57      486</code></pre>
+
+	      </div>
+          <div id="wiki-sidebar" class="Box Box--condensed float-md-left col-md-3">
+	        <div id="sidebar-content" class="gollum-markdown-content markdown-body px-4">
+	          <ul>
+<li>
+<a href="../Home.html" rel="nofollow">Home</a>
+
+<ul>
+<li><a href="Getting-Started.html" rel="nofollow">Getting Started</a></li>
+<li><a href="Registry-Authentication.html" rel="nofollow">Registry Authentication</a></li>
+<li><a href="Address-Space.html" rel="nofollow">Address Space</a></li>
+<li><a href="Bird-communities.html" rel="nofollow">BGP communities</a></li>
+<li><a href="../FAQ.html" rel="nofollow">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<p>How-To</p>
+
+<ul>
+<li><a href="wireguard.html" rel="nofollow">Wireguard</a></li>
+<li><a href="openvpn.html" rel="nofollow">Openvpn</a></li>
+<li><a href="IPsec-with-PublicKeys.html" rel="nofollow">IPsec With Public Keys</a></li>
+<li><a href="tinc.html" rel="nofollow">Tinc</a></li>
+<li><a href="GRE-on-FreeBSD.html" rel="nofollow">GRE on FreeBSD</a></li>
+<li><a href="GRE-on-OpenBSD.html" rel="nofollow">GRE on OpenBSD</a></li>
+<li><a href="IPv6-Multicast.html" rel="nofollow">IPv6 Multicast (PIM-SM)</a></li>
+<li>
+<a href="Bird.html" rel="nofollow">Bird</a> / <a href="Bird2.html" rel="nofollow">Bird2</a>
+</li>
+<li><a href="Quagga.html" rel="nofollow">Quagga</a></li>
+<li><a href="OpenBGPD.html" rel="nofollow">OpenBGPD</a></li>
+<li><a href="mikrotik.html" rel="nofollow">Mikrotik RouterOS</a></li>
+<li><a href="EdgeOS-Config.html" rel="nofollow">EdgeRouter</a></li>
+<li><a href="Static-routes-on-Windows.html" rel="nofollow">Static routes on Windows</a></li>
+<li><a href="networksettings.html" rel="nofollow">Universal Network Requirements</a></li>
+<li><a href="vyos.html" rel="nofollow">VyOS</a></li>
+<li><a href="nixos.html" rel="nofollow">NixOS</a></li>
+</ul>
+</li>
+<li>
+<p>Services</p>
+
+<ul>
+<li><a href="../services/IRC.html" rel="nofollow">IRC</a></li>
+<li><a href="../services/Whois.html" rel="nofollow">Whois registry</a></li>
+<li><a href="../services/DNS.html" rel="nofollow">DNS</a></li>
+<li><a href="../services/Clearnet-Domains.html" rel="nofollow">Public DNS</a></li>
+<li><a href="../services/Looking-Glasses.html" rel="nofollow">Looking Glasses</a></li>
+<li><a href="../services/Automatic-Peering.html" rel="nofollow">Automatic Peering</a></li>
+<li><a href="../services/Repository-Mirrors.html" rel="nofollow">Repository Mirrors</a></li>
+<li><a href="../services/Distributed-Wiki.html" rel="nofollow">Distributed Wiki</a></li>
+<li><a href="../services/Certificate-Authority.html" rel="nofollow">Certificate Authority</a></li>
+<li><a href="../services/Route-Collector.html" rel="nofollow">Route Collector</a></li>
+</ul>
+</li>
+<li>
+<p>Internal</p>
+
+<ul>
+<li><a href="../internal/Internal-Services.html" rel="nofollow">Internal services</a></li>
+<li><a href="../internal/Interconnections.html" rel="nofollow">Interconnections</a></li>
+<li><a href="../internal/APIs.html" rel="nofollow">APIs</a></li>
+<li>
+<a href="../internal/ShowAndTell.html" rel="nofollow">Show and Tell</a><br />
+</li>
+<li><a href="../internal/Historical-Services.html" rel="nofollow">Historical services</a></li>
+</ul>
+</li>
+<li>
+<p>External Tools</p>
+
+<ul>
+<li><a href="https://paste.dn42.us/" rel="nofollow">Paste Board</a></li>
+<li><a href="https://git.dn42.dev/" rel="nofollow">Git Repositories</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="wiki-footer" class="gollum-markdown-content my-2">
+	    <div id="footer-content" class="Box Box-condensed markdown-body px-4">
+	      <p>Hosted by: <a href="mailto:xuu@sour.is" rel="nofollow">xuu</a>, <a href="mailto:nurtic-vibe@grmml.net" rel="nofollow">nurtic-vibe</a>, <a href="mailto:tom@xcv.vc" rel="nofollow">toBee</a>, <a href="mailto:dn42@burble.com" rel="nofollow">burble</a> | Accessible via: <a href="https://wiki.dn42/" rel="nofollow">dn42</a>, <a href="https://dn42.eu/" rel="nofollow">dn42.eu</a>, <a href="https://dn42.dev/" rel="nofollow">dn42.dev</a></p>
+
+	    </div>
+	  </div>
+
+
+	</div>
+
+
+	<div id="footer" class="pt-4">
+		  <p id="last-edit"><div class="dotted-spinner hidden"></div> <a id="page-info-toggle" data-pagepath="howto/Quagga.md">When was this page last modified?</a></p>
+	</div>
+
+
+</div>
+
+<form name="rename" method="POST" action="http://127.0.0.1:4567/gollum/rename/howto/Quagga.md">
+  <input type="hidden" name="rename"/>
+  <input type="hidden" name="message"/>
+</form>
+
+</div>
+</div>
+</body>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/Quagga.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+</html>

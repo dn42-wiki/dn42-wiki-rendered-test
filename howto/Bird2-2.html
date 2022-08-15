@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/Bird2.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/app-309be032396e783b13a47df58f389b7c8e11c2b2d42640560b874f677c25f6e5.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/print-512498c368be0d3fb1ba105dfa84289ae48380ec9fcbef948bd4e23b0b095bfb.css" media="print">
+
+  <link rel="stylesheet" type="text/css" href="../custom.css" media="all">
+  
+
+  <script>
+  var criticMarkup = '';
+	var baseUrl = '';
+  var showLocalTime = false;
+	var uploadDest = 'uploads';
+	var perPageUploads = '';
+	if (perPageUploads == 'true') {
+	  uploadDest = uploadDest + window.location.pathname.replace(/.*gollum\/[-\w]+\//, "/").replace(/\.[^/.]+$/, "").replace(baseUrl, "")
+	}
+	  var pageFullPath = 'howto/Bird2.md';
+    var pageFormat   = 'markdown';
+
+  </script>
+  <script src="../gollum/assets/app-f05401ee374f0c7f48fc2bc08e30b4f4db705861fd5895ed70998683b383bfb5.js" type="text/javascript"></script>
+  
+
+  <title>Bird2</title>
+</head>
+<body>
+<div class="container-lg clearfix">
+<div id="wiki-wrapper" class="page">
+<div id="head">
+	<nav class="TableObject
+            actions
+            border-bottom
+            border-md-0
+            p-2
+            pt-lg-4
+            px-lg-0
+            overflow-x-scroll">
+  <div class="TableObject-item hide-lg hide-xl">
+    <details class="details-reset details-overlay">
+      <summary class="btn btn-invisible" aria-haspopup="true">
+        <span aria-label="Open menu">☰</span>
+      </summary>
+    
+      <div class="SelectMenu mx-sm-2">
+        <div class="SelectMenu-modal">
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Current Page</h2>
+            <div>Bird2</div>
+          </div>
+    
+            <a
+              class="SelectMenu-item"
+              href="../gollum/history/howto/Bird2.html"
+              role="menuitem"
+            >
+              <span>History</span>
+            </a>
+    
+    
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Main Menu</h2>
+          </div>
+    
+          <div class="SelectMenu-list">
+            <a class="SelectMenu-item" role="menuitem" href="../index.html">
+              Home
+            </a>
+    
+              <a class="SelectMenu-item" role="menuitem" href="../gollum/overview.html">
+                Overview
+              </a>
+    
+              <a
+                class="SelectMenu-item"
+                href="../gollum/latest_changes.html"
+                role="menuitem"
+              >
+                Latest Changes
+              </a>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <a class="btn btn-sm" id="minibutton-home" href="../index.html">
+      Home
+    </a>
+  </div>
+
+  <div
+    class="TableObject-item TableObject-item--primary px-2"
+    
+  >
+    <form class="search-form" action="http://127.0.0.1:4567/gollum/search" method="get" id="search-form">
+    	<input type="text" class="form-control input-block" name="q" id="search-query" placeholder="Search" aria-label="Search site" autocomplete="off">
+    </form>  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/overview.html"
+          id="minibutton-overview"
+        >
+          Overview
+        </a>
+
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/latest_changes.html"
+          id="minibutton-latest-changes"
+        >
+          Latest Changes
+        </a>
+    </div>
+  </div>
+
+  <div class="TableObject-item px-2">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm hide-sm hide-md"
+          href="../gollum/history/howto/Bird2.md/index.html"
+          id="minibutton-history"
+        >
+          History
+        </a>
+
+    </div>
+  </div>
+
+</nav>
+
+</div>
+
+<div id="wiki-content" class="px-2 px-lg-0">
+  <h1 class="header-title text-center text-md-left pt-4">
+    Bird2
+  </h1>
+	<div class="breadcrumb"><nav aria-label="Breadcrumb"><ol>
+<li class="breadcrumb-item"><a href="../gollum/overview/howto/index.html">howto</a></li>
+</ol></nav></div>
+
+	<div class="has-header has-footer has-sidebar has-rightbar">
+	  <div id="wiki-body" class="gollum-markdown-content">
+	    <div id="wiki-header" class="gollum-markdown-content">
+	      <div id="header-content" class="markdown-body">
+	        <p><a href="../index.html" rel="nofollow"><img src="../dn42.png" alt="dn42" /></a></p>
+
+	      </div>
+	    </div>
+	    <div class="main-content clearfix container-lg">
+	      <div class="markdown-body  float-md-left col-md-9" >
+	        
+	        <p>This guide is similar to the normal <a href="Bird.html">Bird</a> guide in that it provides you with help setting up the BIRD routing daemon, with the difference that this page is dedicated to versions 2.x.</p>
+
+<h1><a class="anchor" id="arch-linux" href="#arch-linux"></a>Arch Linux</h1>
+
+<p>The <code>extra/bird</code> package in the arch repositories will usually have a relatively recent version and there is (usually) no need for a manual install over the usual <code># pacman -S bird</code>.</p>
+
+<h1><a class="anchor" id="bird2-version-2-0-8-debian" href="#bird2-version-2-0-8-debian"></a>Bird2 Version &lt;2.0.8 / Debian</h1>
+
+<p>Please note, that Bird2 versions before 2.0.8 don't support IPv6 extended nexthops for IPv4 destinations (<a href="https://bird.network.cz/pipermail/bird-users/2020-April/014412.html">https://bird.network.cz/pipermail/bird-users/2020-April/014412.html</a>).
+Additionally Bird2 before 2.0.8 cannot automatically update filtered bgp routes when an used RPKI source changes.</p>
+
+<p>Debian 11 Bullseye delivers Bird 2.0.7. But you can use the Debian Bullseye backport-repository which provides version 2.0.8 (see <a href="https://backports.debian.org/Instructions/">https://backports.debian.org/Instructions/</a> for adding backports repository and install packages from the repository).</p>
+
+<h1><a class="anchor" id="example-configuration" href="#example-configuration"></a>Example configuration</h1>
+
+<p>Please note: This example configuration is made for use with IPv4 and IPv6 (Really, there is no excuse not to get started with IPv6 networking! :) )</p>
+
+<p>The default config location in bird version 2.x is <code>/etc/bird.conf</code>, but this may vary depending on how your distribution compiled bird.</p>
+
+<p>When copying the configuration below onto your system, you will have to enter the following values in the file header:</p>
+
+<ul>
+<li>Replace <code>&lt;OWNAS&gt;</code> with your autonomous system number, e.g. <code>4242421234</code>
+</li>
+<li>Replace <code>&lt;OWNIP&gt;</code> with the ip that your router is going to have, this is usually the first non-zero ip in your subnet. (E.g. x.x.x.65 in an x.x.x.64/28 network)</li>
+<li>Similarly, replace <code>&lt;OWNIPv6&gt;</code> with the first non-zero ip in your ipv6 subnet.</li>
+<li>Then replace <code>&lt;OWNNET&gt;</code> with the IPv4 subnet that was assigned to you.</li>
+<li>The same goes for <code>&lt;OWNNETv6&gt;</code>, but it takes an IPv6 subnet (Who'd have thought).</li>
+<li>Keep in mind that you'll have to enter both networks in the OWNNET{,v6} and OWNNETSET{,v6}, the two variables are required due to set parsing difficulties with variables.</li>
+</ul>
+
+<pre class="highlight"><code>################################################
+#               Variable header                #
+################################################
+
+define OWNAS =  &lt;OWNAS&gt;;
+define OWNIP =  &lt;OWNIP&gt;;
+define OWNIPv6 = &lt;OWNIPv6&gt;;
+define OWNNET = &lt;OWNNET&gt;;
+define OWNNETv6 = &lt;OWNNETv6&gt;;
+define OWNNETSET = [&lt;OWNNET&gt;+];
+define OWNNETSETv6 = [&lt;OWNNETv6&gt;+];
+
+################################################
+#                 Header end                   #
+################################################
+
+router id OWNIP;
+
+protocol device {
+    scan time 10;
+}
+
+/*
+ *  Utility functions
+ */
+
+function is_self_net() {
+  return net ~ OWNNETSET;
+}
+
+function is_self_net_v6() {
+  return net ~ OWNNETSETv6;
+}
+
+function is_valid_network() {
+  return net ~ [
+    172.20.0.0/14{21,29}, # dn42
+    172.20.0.0/24{28,32}, # dn42 Anycast
+    172.21.0.0/24{28,32}, # dn42 Anycast
+    172.22.0.0/24{28,32}, # dn42 Anycast
+    172.23.0.0/24{28,32}, # dn42 Anycast
+    172.31.0.0/16+,       # ChaosVPN
+    10.100.0.0/14+,       # ChaosVPN
+    10.127.0.0/16{16,32}, # neonetwork
+    10.0.0.0/8{15,24}     # Freifunk.net
+  ];
+}
+
+roa4 table dn42_roa;
+roa6 table dn42_roa_v6;
+
+protocol static {
+    roa4 { table dn42_roa; };
+    include "/etc/bird/roa_dn42.conf";
+};
+
+protocol static {
+    roa6 { table dn42_roa_v6; };
+    include "/etc/bird/roa_dn42_v6.conf";
+};
+
+function is_valid_network_v6() {
+  return net ~ [
+    fd00::/8{44,64} # ULA address space as per RFC 4193
+  ];
+}
+
+protocol kernel {
+    scan time 20;
+
+    ipv6 {
+        import none;
+        export filter {
+            if source = RTS_STATIC then reject;
+            krt_prefsrc = OWNIPv6;
+            accept;
+        };
+    };
+};
+
+protocol kernel {
+    scan time 20;
+
+    ipv4 {
+        import none;
+        export filter {
+            if source = RTS_STATIC then reject;
+            krt_prefsrc = OWNIP;
+            accept;
+        };
+    };
+}
+
+protocol static {
+    route OWNNET reject;
+
+    ipv4 {
+        import all;
+        export none;
+    };
+}
+
+protocol static {
+    route OWNNETv6 reject;
+
+    ipv6 {
+        import all;
+        export none;
+    };
+}
+
+template bgp dnpeers {
+    local as OWNAS;
+    path metric 1;
+
+    ipv4 {
+        import filter {
+          if is_valid_network() &amp;&amp; !is_self_net() then {
+            if (roa_check(dn42_roa, net, bgp_path.last) != ROA_VALID) then {
+              print "[dn42] ROA check failed for ", net, " ASN ", bgp_path.last;
+              reject;
+            } else accept;
+          } else reject;
+        };
+
+        export filter { if is_valid_network() &amp;&amp; source ~ [RTS_STATIC, RTS_BGP] then accept; else reject; };
+        import limit 1000 action block;
+    };
+
+    ipv6 {   
+        import filter {
+          if is_valid_network_v6() &amp;&amp; !is_self_net_v6() then {
+            if (roa_check(dn42_roa_v6, net, bgp_path.last) != ROA_VALID) then {
+              print "[dn42] ROA check failed for ", net, " ASN ", bgp_path.last;
+              reject;
+            } else accept;
+          } else reject;
+        };
+        export filter { if is_valid_network_v6() &amp;&amp; source ~ [RTS_STATIC, RTS_BGP] then accept; else reject; };
+        import limit 1000 action block; 
+    };
+}
+
+
+include "/etc/bird/peers/*";</code></pre>
+
+<h1><a class="anchor" id="route-origin-authorization" href="#route-origin-authorization"></a>Route Origin Authorization</h1>
+
+<p>The example config above relies on ROA configuration files in <code>/etc/bird/roa_dn42{,_v6}.conf</code>. These should be automatically downloaded and updated every so often to prevent BGP highjacking, <a href="Bird.html#route-origin-authorization">see the bird1 page</a> for more details and links to the ROA files. Note: edit the links to replace roa_bird1 to say roa_bird2 if using the cron jobs listed on that page. </p>
+
+<h1><a class="anchor" id="rpki-rtr-for-roa" href="#rpki-rtr-for-roa"></a>RPKI / RTR for ROA</h1>
+
+<p>To use an RTR server for ROA information, replace this config in your bird2 configuration file:</p>
+
+<pre class="highlight"><code>protocol static {
+    roa4 { table dn42_roa; };
+    include "/etc/bird/roa_dn42.conf";
+};
+
+protocol static {
+    roa6 { table dn42_roa_v6; };
+    include "/etc/bird/roa_dn42_v6.conf";
+};</code></pre>
+
+<p>... with this one (by changing address and port so it points to your RTR server)</p>
+
+<p></p><pre class="highlight"><code>protocol rpki roa_dn42 {
+        roa4 { table dn42_roa; };
+        roa6 { table dn42_roa_v6; };
+        remote 10.1.3.3;
+        port 323;
+        refresh 600;
+        retry 300;
+        expire 7200;
+}</code></pre>
+To reflect changes in the ROA table without a manual reload, <strong>ADD</strong> "import table" switch for both channels in your DN42 BGP template:
+
+<pre class="highlight"><code>template bgp dnpeers {
+  ipv4 {
+    ...existing configuration
+    import table;
+  };
+  ipv6 {
+    ...existing configuration
+    import table;
+  };
+}</code></pre>
+
+<h1><a class="anchor" id="setting-up-peers" href="#setting-up-peers"></a>Setting up peers</h1>
+
+<p>Please note: This section assumes that you've already got a tunnel to your peering partner setup.</p>
+
+<p>First, make sure the /etc/bird/peers directory exists:</p>
+
+<pre class="highlight"><code># mkdir -p /etc/bird/peers</code></pre>
+
+<p>Then for each peer, create a configuration file similar to this one:</p>
+
+<p><code>/etc/bird/peers/&lt;NEIGHBOR_NAME&gt;.conf</code>:</p>
+
+<pre class="highlight"><code>protocol bgp &lt;NEIGHBOR_NAME&gt; from dnpeers {
+        neighbor &lt;NEIGHBOR_IP&gt; as &lt;NEIGHBOR_ASN&gt;;
+}
+
+protocol bgp &lt;NEIGHBOR_NAME&gt;_v6 from dnpeers {
+        neighbor &lt;NEIGHBOR_IPv6&gt;%&lt;NEIGHBOR_INTERFACE&gt; as &lt;NEIGHBOR_ASN&gt;;
+}</code></pre>
+
+<p>Due to the special link local addresses of IPv6, an interface has to be specified using the % syntax if a link local address is used (Which is recommended)</p>
+
+	      </div>
+          <div id="wiki-sidebar" class="Box Box--condensed float-md-left col-md-3">
+	        <div id="sidebar-content" class="gollum-markdown-content markdown-body px-4">
+	          <ul>
+<li>
+<a href="../Home.html" rel="nofollow">Home</a>
+
+<ul>
+<li><a href="Getting-Started.html" rel="nofollow">Getting Started</a></li>
+<li><a href="Registry-Authentication.html" rel="nofollow">Registry Authentication</a></li>
+<li><a href="Address-Space.html" rel="nofollow">Address Space</a></li>
+<li><a href="Bird-communities.html" rel="nofollow">BGP communities</a></li>
+<li><a href="../FAQ.html" rel="nofollow">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<p>How-To</p>
+
+<ul>
+<li><a href="wireguard.html" rel="nofollow">Wireguard</a></li>
+<li><a href="openvpn.html" rel="nofollow">Openvpn</a></li>
+<li><a href="IPsec-with-PublicKeys.html" rel="nofollow">IPsec With Public Keys</a></li>
+<li><a href="tinc.html" rel="nofollow">Tinc</a></li>
+<li><a href="GRE-on-FreeBSD.html" rel="nofollow">GRE on FreeBSD</a></li>
+<li><a href="GRE-on-OpenBSD.html" rel="nofollow">GRE on OpenBSD</a></li>
+<li><a href="IPv6-Multicast.html" rel="nofollow">IPv6 Multicast (PIM-SM)</a></li>
+<li>
+<a href="Bird.html" rel="nofollow">Bird</a> / <a href="Bird2.html" rel="nofollow">Bird2</a>
+</li>
+<li><a href="Quagga.html" rel="nofollow">Quagga</a></li>
+<li><a href="OpenBGPD.html" rel="nofollow">OpenBGPD</a></li>
+<li><a href="mikrotik.html" rel="nofollow">Mikrotik RouterOS</a></li>
+<li><a href="EdgeOS-Config.html" rel="nofollow">EdgeRouter</a></li>
+<li><a href="Static-routes-on-Windows.html" rel="nofollow">Static routes on Windows</a></li>
+<li><a href="networksettings.html" rel="nofollow">Universal Network Requirements</a></li>
+<li><a href="vyos.html" rel="nofollow">VyOS</a></li>
+<li><a href="nixos.html" rel="nofollow">NixOS</a></li>
+</ul>
+</li>
+<li>
+<p>Services</p>
+
+<ul>
+<li><a href="../services/IRC.html" rel="nofollow">IRC</a></li>
+<li><a href="../services/Whois.html" rel="nofollow">Whois registry</a></li>
+<li><a href="../services/DNS.html" rel="nofollow">DNS</a></li>
+<li><a href="../services/Clearnet-Domains.html" rel="nofollow">Public DNS</a></li>
+<li><a href="../services/Looking-Glasses.html" rel="nofollow">Looking Glasses</a></li>
+<li><a href="../services/Automatic-Peering.html" rel="nofollow">Automatic Peering</a></li>
+<li><a href="../services/Repository-Mirrors.html" rel="nofollow">Repository Mirrors</a></li>
+<li><a href="../services/Distributed-Wiki.html" rel="nofollow">Distributed Wiki</a></li>
+<li><a href="../services/Certificate-Authority.html" rel="nofollow">Certificate Authority</a></li>
+<li><a href="../services/Route-Collector.html" rel="nofollow">Route Collector</a></li>
+</ul>
+</li>
+<li>
+<p>Internal</p>
+
+<ul>
+<li><a href="../internal/Internal-Services.html" rel="nofollow">Internal services</a></li>
+<li><a href="../internal/Interconnections.html" rel="nofollow">Interconnections</a></li>
+<li><a href="../internal/APIs.html" rel="nofollow">APIs</a></li>
+<li>
+<a href="../internal/ShowAndTell.html" rel="nofollow">Show and Tell</a><br />
+</li>
+<li><a href="../internal/Historical-Services.html" rel="nofollow">Historical services</a></li>
+</ul>
+</li>
+<li>
+<p>External Tools</p>
+
+<ul>
+<li><a href="https://paste.dn42.us/" rel="nofollow">Paste Board</a></li>
+<li><a href="https://git.dn42.dev/" rel="nofollow">Git Repositories</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="wiki-footer" class="gollum-markdown-content my-2">
+	    <div id="footer-content" class="Box Box-condensed markdown-body px-4">
+	      <p>Hosted by: <a href="mailto:xuu@sour.is" rel="nofollow">xuu</a>, <a href="mailto:nurtic-vibe@grmml.net" rel="nofollow">nurtic-vibe</a>, <a href="mailto:tom@xcv.vc" rel="nofollow">toBee</a>, <a href="mailto:dn42@burble.com" rel="nofollow">burble</a> | Accessible via: <a href="https://wiki.dn42/" rel="nofollow">dn42</a>, <a href="https://dn42.eu/" rel="nofollow">dn42.eu</a>, <a href="https://dn42.dev/" rel="nofollow">dn42.dev</a></p>
+
+	    </div>
+	  </div>
+
+
+	</div>
+
+
+	<div id="footer" class="pt-4">
+		  <p id="last-edit"><div class="dotted-spinner hidden"></div> <a id="page-info-toggle" data-pagepath="howto/Bird2.md">When was this page last modified?</a></p>
+	</div>
+
+
+</div>
+
+<form name="rename" method="POST" action="http://127.0.0.1:4567/gollum/rename/howto/Bird2.md">
+  <input type="hidden" name="rename"/>
+  <input type="hidden" name="message"/>
+</form>
+
+</div>
+</div>
+</body>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/Bird2.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+</html>

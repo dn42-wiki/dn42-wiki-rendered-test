@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/vyos by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/app-309be032396e783b13a47df58f389b7c8e11c2b2d42640560b874f677c25f6e5.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/print-512498c368be0d3fb1ba105dfa84289ae48380ec9fcbef948bd4e23b0b095bfb.css" media="print">
+
+  <link rel="stylesheet" type="text/css" href="../custom.css" media="all">
+  
+
+  <script>
+  var criticMarkup = '';
+	var baseUrl = '';
+  var showLocalTime = false;
+	var uploadDest = 'uploads';
+	var perPageUploads = '';
+	if (perPageUploads == 'true') {
+	  uploadDest = uploadDest + window.location.pathname.replace(/.*gollum\/[-\w]+\//, "/").replace(/\.[^/.]+$/, "").replace(baseUrl, "")
+	}
+	  var pageFullPath = 'howto/vyos.md';
+    var pageFormat   = 'markdown';
+
+  </script>
+  <script src="../gollum/assets/app-f05401ee374f0c7f48fc2bc08e30b4f4db705861fd5895ed70998683b383bfb5.js" type="text/javascript"></script>
+  
+
+  <title>vyos</title>
+</head>
+<body>
+<div class="container-lg clearfix">
+<div id="wiki-wrapper" class="page">
+<div id="head">
+	<nav class="TableObject
+            actions
+            border-bottom
+            border-md-0
+            p-2
+            pt-lg-4
+            px-lg-0
+            overflow-x-scroll">
+  <div class="TableObject-item hide-lg hide-xl">
+    <details class="details-reset details-overlay">
+      <summary class="btn btn-invisible" aria-haspopup="true">
+        <span aria-label="Open menu">☰</span>
+      </summary>
+    
+      <div class="SelectMenu mx-sm-2">
+        <div class="SelectMenu-modal">
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Current Page</h2>
+            <div>vyos</div>
+          </div>
+    
+            <a
+              class="SelectMenu-item"
+              href="../gollum/history/howto/vyos.html"
+              role="menuitem"
+            >
+              <span>History</span>
+            </a>
+    
+    
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Main Menu</h2>
+          </div>
+    
+          <div class="SelectMenu-list">
+            <a class="SelectMenu-item" role="menuitem" href="../index.html">
+              Home
+            </a>
+    
+              <a class="SelectMenu-item" role="menuitem" href="../gollum/overview.html">
+                Overview
+              </a>
+    
+              <a
+                class="SelectMenu-item"
+                href="../gollum/latest_changes.html"
+                role="menuitem"
+              >
+                Latest Changes
+              </a>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <a class="btn btn-sm" id="minibutton-home" href="../index.html">
+      Home
+    </a>
+  </div>
+
+  <div
+    class="TableObject-item TableObject-item--primary px-2"
+    
+  >
+    <form class="search-form" action="http://127.0.0.1:4567/gollum/search" method="get" id="search-form">
+    	<input type="text" class="form-control input-block" name="q" id="search-query" placeholder="Search" aria-label="Search site" autocomplete="off">
+    </form>  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/overview.html"
+          id="minibutton-overview"
+        >
+          Overview
+        </a>
+
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/latest_changes.html"
+          id="minibutton-latest-changes"
+        >
+          Latest Changes
+        </a>
+    </div>
+  </div>
+
+  <div class="TableObject-item px-2">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm hide-sm hide-md"
+          href="../gollum/history/howto/vyos.md/index.html"
+          id="minibutton-history"
+        >
+          History
+        </a>
+
+    </div>
+  </div>
+
+</nav>
+
+</div>
+
+<div id="wiki-content" class="px-2 px-lg-0">
+  <h1 class="header-title text-center text-md-left pt-4">
+    vyos
+  </h1>
+	<div class="breadcrumb"><nav aria-label="Breadcrumb"><ol>
+<li class="breadcrumb-item"><a href="../gollum/overview/howto/index.html">howto</a></li>
+</ol></nav></div>
+
+	<div class="has-header has-footer has-sidebar has-rightbar">
+	  <div id="wiki-body" class="gollum-markdown-content">
+	    <div id="wiki-header" class="gollum-markdown-content">
+	      <div id="header-content" class="markdown-body">
+	        <p><a href="../index.html" rel="nofollow"><img src="../dn42.png" alt="dn42" /></a></p>
+
+	      </div>
+	    </div>
+	    <div class="main-content clearfix container-lg">
+	      <div class="markdown-body  float-md-left col-md-9" >
+	        
+	        <h1><a class="anchor" id="vyos" href="#vyos"></a>VyOS</h1>
+
+<p>VyOS is an open source software router.  It is feature rich and supports multiple deployment options such as physical hardware (Old PC's) or a VPC/VM.  The developers have a nightly rolling release that includes all the latest features such as Wireguard.</p>
+
+<p>It can be downloaded here <a href="https://www.vyos.io/rolling-release/">https://www.vyos.io/rolling-release/</a>.  </p>
+
+<h2><a class="anchor" id="firewall-baseline" href="#firewall-baseline"></a>Firewall Baseline</h2>
+
+<p>We will configure firewall access lists for inbound connections on our peer Wireguard interfaces as well as block all inbound connections to our router with the exception of BGP.  This should be a good baseline firewall ruleset to filter inbound traffic on your network’s edge.  Modifications may be needed depending on your specific goals.  If your router has an uplink back to a larger internal network (outside of DN42), an outbound firewall ruleset will need to be applied to that interface. The examples here only cover <strong>IPv4</strong>, but the same concepts can be applied to <strong>IPv6</strong> rulesets.</p>
+
+<p>By default, VyOS is a <strong>stateless</strong> firewall.  To enable <strong>stateful</strong> packet inspection globally enter the following commands.
+</p><pre class="highlight"><code>set firewall state-policy established action 'accept'
+set firewall state-policy related action 'accept'</code></pre>
+
+<p>We also need to accept invalids on our network’s edge.  However, this should not become common practice elsewhere.
+</p><pre class="highlight"><code>set firewall state-policy invalid action 'accept'</code></pre>
+
+<p>The below commands create <strong>in</strong> and <strong>local</strong> baseline templates to be applied to all Wireguard interfaces that are facing peers.  In this example, <strong>172.20.20.0/24</strong> is your assigned address space.
+</p><pre class="highlight"><code>#Create Groups
+set firewall group network-group Allowed-Transit-v4 network '10.0.0.0/8'
+set firewall group network-group Allowed-Transit-v4 network '172.20.0.0/14'
+set firewall group network-group Allowed-Transit-v4 network '172.31.0.0/16'
+
+#Inbound Connections
+set firewall name Tunnels_In_v4 default-action 'drop'
+set firewall name Tunnels_In_v4 enable-default-log
+set firewall name Tunnels_In_v4 rule 68 action 'drop'
+set firewall name Tunnels_In_v4 rule 68 description 'Block Traffic to Operator Assigned IP Space'
+set firewall name Tunnels_In_v4 rule 68 destination address '172.20.20.0/24'
+set firewall name Tunnels_In_v4 rule 68 log 'enable'
+set firewall name Tunnels_In_v4 rule 68 action 'drop'
+set firewall name Tunnels_In_v4 rule 70 action 'accept'
+set firewall name Tunnels_In_v4 rule 70 description 'Allow Peer Transit'
+set firewall name Tunnels_In_v4 rule 70 destination group network-group 'Allowed-Transit-v4'
+set firewall name Tunnels_In_v4 rule 70 source group network-group 'Allowed-Transit-v4'
+set firewall name Tunnels_In_v4 rule 70 log 'enable'
+set firewall name Tunnels_In_v4 rule 99 action 'drop'
+set firewall name Tunnels_In_v4 rule 99 description 'Black Hole'
+set firewall name Tunnels_In_v4 rule 99 log 'enable'
+
+#Local Connections
+set firewall name Tunnels_Local_v4 default-action 'drop'
+set firewall name Tunnels_Local_v4 rule 50 action 'accept'
+set firewall name Tunnels_Local_v4 rule 50 icmp
+set firewall name Tunnels_Local_v4 rule 50 protocol 'icmp'
+set firewall name Tunnels_Local_v4 rule 61 action 'accept'
+set firewall name Tunnels_Local_v4 rule 61 description 'Allow BGP'
+set firewall name Tunnels_Local_v4 rule 61 destination port '179'
+set firewall name Tunnels_Local_v4 rule 61 protocol 'tcp'
+set firewall name Tunnels_Local_v4 rule 98 action 'drop'
+set firewall name Tunnels_Local_v4 rule 98 description 'Black Hole'
+set firewall name Tunnels_Local_v4 rule 98 log 'enable'
+set firewall name Tunnels_Local_v4 rule 98 state invalid 'enable'
+set firewall name Tunnels_Local_v4 rule 99 action 'drop'
+set firewall name Tunnels_Local_v4 rule 99 description 'Black Hole'
+set firewall name Tunnels_Local_v4 rule 99 log 'enable'</code></pre>
+
+<h2><a class="anchor" id="wireguard" href="#wireguard"></a>Wireguard</h2>
+
+<h3><a class="anchor" id="setup-keys" href="#setup-keys"></a>Setup Keys</h3>
+
+<p></p><pre class="highlight"><code>generate wireguard default-keypair
+show wireguard keypairs pubkey default</code></pre>
+<em>Grab your public key and save it for later.  This will be shared with peers.</em>  
+
+<h3><a class="anchor" id="configure-first-peer" href="#configure-first-peer"></a>Configure First Peer</h3>
+
+<pre class="highlight"><code>#Your DN42 Address
+set interfaces wireguard wg92 address '172.20.20.1/32'
+
+#Apply Description and Firewall
+set interfaces wireguard wg92 description 'First Peer Example'
+set interfaces wireguard wg92 firewall in name 'Tunnels_In_v4'
+set interfaces wireguard wg92 firewall local name 'Tunnels_Local_v4'
+
+#Peer Endpoint Address (Clearnet)
+set interfaces wireguard wg92 peer location1 address '123.243.141.39'
+
+#Best to allow everything here - This is why we have a firewall
+set interfaces wireguard wg92 peer location1 allowed-ips '0.0.0.0/0'
+
+#First Peer's Endpoint Port and Public Key
+set interfaces wireguard wg92 peer location1 port '12345'
+set interfaces wireguard wg92 peer location1 pubkey '=kjhfkasdhjdsfasdefghjklfghjkl/'
+
+#Port Your Endpoint Listens On
+set interfaces wireguard wg92 port '12345'
+
+#Set static interface route to first peers /32 DN42 IPv4 on their tunnel endpoint
+set protocols static interface-route 172.20.50.1/32 next-hop-interface wg92</code></pre>
+
+<h2><a class="anchor" id="bgp" href="#bgp"></a>BGP</h2>
+
+<p>Now that we have a tunnel to our peer and theoretically can ping them, we can setup BGP.  </p>
+
+<h3><a class="anchor" id="initial-router-setup" href="#initial-router-setup"></a>Initial Router Setup</h3>
+
+<p><code>set protocols bgp 424242XXXX address-family ipv4-unicast network 172.x.x.x\x</code><br />
+<em>Insert your ASN and your assigned network block.  Note that this should match your exact prefix as listed in the registry; if you try to advertise a subnet of your assigned block it could get filtered by some peers.</em><br />
+<code>set protocols bgp 424242XXX parameters router-id 172.x.x.x</code><br />
+<em>To keep it simple just make your router ID match your lower IP within the DN42 registered space.</em>  </p>
+
+<h3><a class="anchor" id="neighbor-up-with-peers" href="#neighbor-up-with-peers"></a>Neighbor Up With Peers</h3>
+
+<p><code>set protocols bgp 424242XXXX neighbor 172.x.x.x address-family ipv4-unicast</code><br />
+<em>This is likely the same IP as the one used in your static route earlier when creating the Wireguard tunnel.</em><br />
+<code>set protocols bgp 424242XXXX neighbor 172.x.x.x ebgp-multihop 20</code><br />
+<em>This setting may need to be adjusted depending on circumstances</em><br />
+<code>set protocols bgp 424242XXXX neighbor 172.x.x.x remote-as 424242XXXX</code><br />
+<em>Your peers ASN</em>  </p>
+
+<p><code>show ip bgp summary</code></p>
+
+<h2><a class="anchor" id="rpki-roa-checking" href="#rpki-roa-checking"></a>RPKI/ROA Checking</h2>
+
+<h3><a class="anchor" id="setup-rpki-caching-server" href="#setup-rpki-caching-server"></a>Setup RPKI Caching Server</h3>
+
+<p>Burble has made this super easy.  More info can be found <a href="https://wiki.dn42/howto/ROA-slash-RPKI">here</a> on this wiki.  Get started by running the below command on a Linux server with Docker installed.     </p>
+
+<pre class="highlight"><code>sudo docker run -ti -p 8082:8082 cloudflare/gortr -cache https://dn42.burble.com/roa/dn42_roa_46.json -verify=false -checktime=false -bind :8082</code></pre>
+
+<p>This will start a docker container that listens on the host server's IP at port 8082.  This setup is using Cloudflare's GoRTR and automatically reaching out and downloading a custom JSON file generated by Burble just for the DN42 network.  </p>
+
+<h3><a class="anchor" id="point-vyos-router-at-rpki-caching-server" href="#point-vyos-router-at-rpki-caching-server"></a>Point VyOS Router at RPKI Caching Server</h3>
+
+<p><code>set protocols rpki cache GoRTR address x.x.x.x</code>   </p>
+
+<p><code>set protocols rpki cache GoRTR port 8082</code>  </p>
+
+<p>You can check the connection with <code>show rpki cache-connection</code> and the received prefix-table with <code>show rpki prefix-table</code>.  </p>
+
+<h3><a class="anchor" id="create-route-map" href="#create-route-map"></a>Create Route Map</h3>
+
+<p></p><pre class="highlight"><code>set policy route-map DN42-ROA rule 10 action 'permit'
+set policy route-map DN42-ROA rule 10 match rpki 'valid'
+set policy route-map DN42-ROA rule 20 action 'permit'
+set policy route-map DN42-ROA rule 20 match rpki 'notfound'
+set policy route-map DN42-ROA rule 30 action 'deny'
+set policy route-map DN42-ROA rule 30 match rpki 'invalid'</code></pre>
+This example allows all routes in unless they are marked invalid or in other words possibly been a victim of BGP hijacking.  
+
+<h3><a class="anchor" id="assign-route-map-to-neighbor" href="#assign-route-map-to-neighbor"></a>Assign Route Map to Neighbor</h3>
+
+<pre class="highlight"><code>set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map import DN42-ROA  
+set protocols bgp 424242XXXX neighbor x.x.x.x address-family ipv4-unicast route-map export DN42-ROA   </code></pre>
+
+<h2><a class="anchor" id="example-route-map" href="#example-route-map"></a>Example Route Map</h2>
+
+<h3><a class="anchor" id="no-rpki-roa-and-internal-network-falls-into-dn42-range" href="#no-rpki-roa-and-internal-network-falls-into-dn42-range"></a>No RPKI/ROA and Internal Network Falls Into DN42 Range</h3>
+
+<pre class="highlight"><code>##Build prefix list to match personal internal network
+set policy prefix-list BlockIPConflicts description 'Prevent Conflicting Routes'
+set policy prefix-list BlockIPConflicts rule 10 action 'permit'
+set policy prefix-list BlockIPConflicts rule 10 description 'Internal IP Space'
+set policy prefix-list BlockIPConflicts rule 10 le '32'
+set policy prefix-list BlockIPConflicts rule 10 prefix '10.10.0.0/16'
+
+
+##Build prefix list to match personal internal network
+set policy prefix-list6 BlockIPConflicts-v6 description 'Prevent Conflicting Routes'
+set policy prefix-list6 BlockIPConflicts-v6 rule 10 action 'permit'
+set policy prefix-list6 BlockIPConflicts-v6 rule 10 description 'Internal IP Space'
+set policy prefix-list6 BlockIPConflicts-v6 rule 10 le '128'
+set policy prefix-list6 BlockIPConflicts-v6 rule 10 prefix 'fd42:4242:1111::/48'
+
+
+
+##Build prefix list to match DN42's IPv4 network
+set policy prefix-list DN42-Network rule 10 action 'permit'
+set policy prefix-list DN42-Network rule 10 le '32'
+set policy prefix-list DN42-Network rule 10 prefix '172.20.0.0/14'
+set policy prefix-list DN42-Network rule 20 action 'permit'
+set policy prefix-list DN42-Network rule 20 le '32'
+set policy prefix-list DN42-Network rule 20 prefix '10.0.0.0/8'
+
+
+##Build prefix list to match DN42's IPv6 network
+set policy prefix-list6 DN42-Network-v6 rule 10 action 'permit'
+set policy prefix-list6 DN42-Network-v6 rule 10 le '128'
+set policy prefix-list6 DN42-Network-v6 rule 10 prefix 'fd00::/8'
+
+
+
+
+##Block prefixes within internal network range, then allow everything else within DN42, then block everything else.
+set policy route-map Default-Peering rule 10 action 'deny'
+set policy route-map Default-Peering rule 10 description 'Prevent IP Conflicts'
+set policy route-map Default-Peering rule 10 match ip address prefix-list 'BlockIPConflicts'
+set policy route-map Default-Peering rule 11 action 'deny'
+set policy route-map Default-Peering rule 11 description 'Prevent IP Conflicts'
+set policy route-map Default-Peering rule 11 match ip address prefix-list6 'BlockIPConflicts-v6'
+set policy route-map Default-Peering rule 20 action 'permit'
+set policy route-map Default-Peering rule 20 description 'Allow DN42-Network'
+set policy route-map Default-Peering rule 20 match ip address prefix-list 'DN42-Network-Network'
+set policy route-map Default-Peering rule 21 action 'permit'
+set policy route-map Default-Peering rule 21 description 'Allow DN42-Network'
+set policy route-map Default-Peering rule 21 match ip address prefix-list6 'DN42-Network-Network-v6'
+set policy route-map Default-Peering rule 99 action 'deny'
+
+
+##Apply the route-map on import/export
+
+set protocols bgp 4242421099 neighbor x.x.x.x address-family ipv4-unicast route-map export 'Default-Peering'
+set protocols bgp 4242421099 neighbor x.x.x.x address-family ipv4-unicast route-map import 'Default-Peering'
+set protocols bgp 4242421099 neighbor x.x.x.x address-family ipv6-unicast route-map export 'Default-Peering'
+set protocols bgp 4242421099 neighbor x.x.x.x address-family ipv6-unicast route-map import 'Default-Peering'</code></pre>
+
+<p>This page is a work-in-progress by Owens Research.  If you have any suggestions or questions please reach out.</p>
+
+	      </div>
+          <div id="wiki-sidebar" class="Box Box--condensed float-md-left col-md-3">
+	        <div id="sidebar-content" class="gollum-markdown-content markdown-body px-4">
+	          <ul>
+<li>
+<a href="../Home.html" rel="nofollow">Home</a>
+
+<ul>
+<li><a href="Getting-Started.html" rel="nofollow">Getting Started</a></li>
+<li><a href="Registry-Authentication.html" rel="nofollow">Registry Authentication</a></li>
+<li><a href="Address-Space.html" rel="nofollow">Address Space</a></li>
+<li><a href="Bird-communities.html" rel="nofollow">BGP communities</a></li>
+<li><a href="../FAQ.html" rel="nofollow">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<p>How-To</p>
+
+<ul>
+<li><a href="wireguard.html" rel="nofollow">Wireguard</a></li>
+<li><a href="openvpn.html" rel="nofollow">Openvpn</a></li>
+<li><a href="IPsec-with-PublicKeys.html" rel="nofollow">IPsec With Public Keys</a></li>
+<li><a href="tinc.html" rel="nofollow">Tinc</a></li>
+<li><a href="GRE-on-FreeBSD.html" rel="nofollow">GRE on FreeBSD</a></li>
+<li><a href="GRE-on-OpenBSD.html" rel="nofollow">GRE on OpenBSD</a></li>
+<li><a href="IPv6-Multicast.html" rel="nofollow">IPv6 Multicast (PIM-SM)</a></li>
+<li>
+<a href="Bird.html" rel="nofollow">Bird</a> / <a href="Bird2.html" rel="nofollow">Bird2</a>
+</li>
+<li><a href="Quagga.html" rel="nofollow">Quagga</a></li>
+<li><a href="OpenBGPD.html" rel="nofollow">OpenBGPD</a></li>
+<li><a href="mikrotik.html" rel="nofollow">Mikrotik RouterOS</a></li>
+<li><a href="EdgeOS-Config.html" rel="nofollow">EdgeRouter</a></li>
+<li><a href="Static-routes-on-Windows.html" rel="nofollow">Static routes on Windows</a></li>
+<li><a href="networksettings.html" rel="nofollow">Universal Network Requirements</a></li>
+<li><a href="vyos.html" rel="nofollow">VyOS</a></li>
+<li><a href="nixos.html" rel="nofollow">NixOS</a></li>
+</ul>
+</li>
+<li>
+<p>Services</p>
+
+<ul>
+<li><a href="../services/IRC.html" rel="nofollow">IRC</a></li>
+<li><a href="../services/Whois.html" rel="nofollow">Whois registry</a></li>
+<li><a href="../services/DNS.html" rel="nofollow">DNS</a></li>
+<li><a href="../services/Clearnet-Domains.html" rel="nofollow">Public DNS</a></li>
+<li><a href="../services/Looking-Glasses.html" rel="nofollow">Looking Glasses</a></li>
+<li><a href="../services/Automatic-Peering.html" rel="nofollow">Automatic Peering</a></li>
+<li><a href="../services/Repository-Mirrors.html" rel="nofollow">Repository Mirrors</a></li>
+<li><a href="../services/Distributed-Wiki.html" rel="nofollow">Distributed Wiki</a></li>
+<li><a href="../services/Certificate-Authority.html" rel="nofollow">Certificate Authority</a></li>
+<li><a href="../services/Route-Collector.html" rel="nofollow">Route Collector</a></li>
+</ul>
+</li>
+<li>
+<p>Internal</p>
+
+<ul>
+<li><a href="../internal/Internal-Services.html" rel="nofollow">Internal services</a></li>
+<li><a href="../internal/Interconnections.html" rel="nofollow">Interconnections</a></li>
+<li><a href="../internal/APIs.html" rel="nofollow">APIs</a></li>
+<li>
+<a href="../internal/ShowAndTell.html" rel="nofollow">Show and Tell</a><br />
+</li>
+<li><a href="../internal/Historical-Services.html" rel="nofollow">Historical services</a></li>
+</ul>
+</li>
+<li>
+<p>External Tools</p>
+
+<ul>
+<li><a href="https://paste.dn42.us/" rel="nofollow">Paste Board</a></li>
+<li><a href="https://git.dn42.dev/" rel="nofollow">Git Repositories</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="wiki-footer" class="gollum-markdown-content my-2">
+	    <div id="footer-content" class="Box Box-condensed markdown-body px-4">
+	      <p>Hosted by: <a href="mailto:xuu@sour.is" rel="nofollow">xuu</a>, <a href="mailto:nurtic-vibe@grmml.net" rel="nofollow">nurtic-vibe</a>, <a href="mailto:tom@xcv.vc" rel="nofollow">toBee</a>, <a href="mailto:dn42@burble.com" rel="nofollow">burble</a> | Accessible via: <a href="https://wiki.dn42/" rel="nofollow">dn42</a>, <a href="https://dn42.eu/" rel="nofollow">dn42.eu</a>, <a href="https://dn42.dev/" rel="nofollow">dn42.dev</a></p>
+
+	    </div>
+	  </div>
+
+
+	</div>
+
+
+	<div id="footer" class="pt-4">
+		  <p id="last-edit"><div class="dotted-spinner hidden"></div> <a id="page-info-toggle" data-pagepath="howto/vyos.md">When was this page last modified?</a></p>
+	</div>
+
+
+</div>
+
+<form name="rename" method="POST" action="http://127.0.0.1:4567/gollum/rename/howto/vyos.md">
+  <input type="hidden" name="rename"/>
+  <input type="hidden" name="message"/>
+</form>
+
+</div>
+</div>
+</body>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/vyos by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+</html>

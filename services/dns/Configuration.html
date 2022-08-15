@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from 127.0.0.1:4567/services/dns/Configuration by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="../../gollum/assets/app-309be032396e783b13a47df58f389b7c8e11c2b2d42640560b874f677c25f6e5.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../../gollum/assets/print-512498c368be0d3fb1ba105dfa84289ae48380ec9fcbef948bd4e23b0b095bfb.css" media="print">
+
+  <link rel="stylesheet" type="text/css" href="../../custom.css" media="all">
+  
+
+  <script>
+  var criticMarkup = '';
+	var baseUrl = '';
+  var showLocalTime = false;
+	var uploadDest = 'uploads';
+	var perPageUploads = '';
+	if (perPageUploads == 'true') {
+	  uploadDest = uploadDest + window.location.pathname.replace(/.*gollum\/[-\w]+\//, "/").replace(/\.[^/.]+$/, "").replace(baseUrl, "")
+	}
+	  var pageFullPath = 'services/dns/Configuration.md';
+    var pageFormat   = 'markdown';
+
+  </script>
+  <script src="../../gollum/assets/app-f05401ee374f0c7f48fc2bc08e30b4f4db705861fd5895ed70998683b383bfb5.js" type="text/javascript"></script>
+  
+
+  <title>Configuration</title>
+</head>
+<body>
+<div class="container-lg clearfix">
+<div id="wiki-wrapper" class="page">
+<div id="head">
+	<nav class="TableObject
+            actions
+            border-bottom
+            border-md-0
+            p-2
+            pt-lg-4
+            px-lg-0
+            overflow-x-scroll">
+  <div class="TableObject-item hide-lg hide-xl">
+    <details class="details-reset details-overlay">
+      <summary class="btn btn-invisible" aria-haspopup="true">
+        <span aria-label="Open menu">☰</span>
+      </summary>
+    
+      <div class="SelectMenu mx-sm-2">
+        <div class="SelectMenu-modal">
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Current Page</h2>
+            <div>Configuration</div>
+          </div>
+    
+            <a
+              class="SelectMenu-item"
+              href="../../gollum/history/services/dns/Configuration.html"
+              role="menuitem"
+            >
+              <span>History</span>
+            </a>
+    
+    
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Main Menu</h2>
+          </div>
+    
+          <div class="SelectMenu-list">
+            <a class="SelectMenu-item" role="menuitem" href="../../index.html">
+              Home
+            </a>
+    
+              <a class="SelectMenu-item" role="menuitem" href="../../gollum/overview.html">
+                Overview
+              </a>
+    
+              <a
+                class="SelectMenu-item"
+                href="../../gollum/latest_changes.html"
+                role="menuitem"
+              >
+                Latest Changes
+              </a>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <a class="btn btn-sm" id="minibutton-home" href="../../index.html">
+      Home
+    </a>
+  </div>
+
+  <div
+    class="TableObject-item TableObject-item--primary px-2"
+    
+  >
+    <form class="search-form" action="http://127.0.0.1:4567/gollum/search" method="get" id="search-form">
+    	<input type="text" class="form-control input-block" name="q" id="search-query" placeholder="Search" aria-label="Search site" autocomplete="off">
+    </form>  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../../gollum/overview.html"
+          id="minibutton-overview"
+        >
+          Overview
+        </a>
+
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../../gollum/latest_changes.html"
+          id="minibutton-latest-changes"
+        >
+          Latest Changes
+        </a>
+    </div>
+  </div>
+
+  <div class="TableObject-item px-2">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm hide-sm hide-md"
+          href="../../gollum/history/services/dns/Configuration.md/index.html"
+          id="minibutton-history"
+        >
+          History
+        </a>
+
+    </div>
+  </div>
+
+</nav>
+
+</div>
+
+<div id="wiki-content" class="px-2 px-lg-0">
+  <h1 class="header-title text-center text-md-left pt-4">
+    Configuration
+  </h1>
+	<div class="breadcrumb"><nav aria-label="Breadcrumb"><ol>
+<li class="breadcrumb-item"><a href="../../gollum/overview/services/index.html">services</a></li>
+<li class="breadcrumb-item"><a href="../../gollum/overview/services/dns/index.html">dns</a></li>
+</ol></nav></div>
+
+	<div class="has-header has-footer has-sidebar has-rightbar">
+	  <div id="wiki-body" class="gollum-markdown-content">
+	    <div id="wiki-header" class="gollum-markdown-content">
+	      <div id="header-content" class="markdown-body">
+	        <p><a href="../../index.html" rel="nofollow"><img src="../../dn42.png" alt="dn42" /></a></p>
+
+	      </div>
+	    </div>
+	    <div class="main-content clearfix container-lg">
+	      <div class="markdown-body  float-md-left col-md-9" >
+	        
+	        <h1><a class="anchor" id="forwarder-setup" href="#forwarder-setup"></a>Forwarder setup</h1>
+
+<p>Configuration of common resolver softwares to forward DNS queries for <code>.dn42</code> (and reverse DNS) IPv4 and IPv6 anycast services.</p>
+
+<p>You can use any *.recursive-servers.dn42 (where * is a letter) for resolving .dn42 domains. The current list is available at the <a href="https://git.dn42.dev/dn42/registry/src/master/data/dns/recursive-servers.dn42">DN42 registry</a> or through querying SRV records of recursive-servers.dn42:</p>
+
+<pre class="highlight"><code>drill <span class="nt">-D</span> SRV _dns._udp.recursive-servers.dn42. @172.20.0.53</code></pre>
+
+<p>Two independent anycast services are also provided:</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>IPv4</th>
+<th>IPv6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a0.recursive-servers.dn42</td>
+<td>172.20.0.53</td>
+<td>fd42:d42:d42:54::1</td>
+</tr>
+<tr>
+<td>a3.recursive-servers.dn42</td>
+<td>172.23.0.53</td>
+<td>fd42:d42:d42:53::1</td>
+</tr>
+</tbody>
+</table>
+
+<p>All the examples here list 172.20.0.53/fd42:d42:d42:54::1, but users are encouraged to configure
+multiple services from *.recursive-servers.dn42 for redundancy. </p>
+
+<h2><a class="anchor" id="note-on-icvpn-zones" href="#note-on-icvpn-zones"></a>Note on ICVPN Zones</h2>
+
+<p>DN42 is <a href="../../internal/Interconnections.html">interconnected</a> with the Inter City VPN or in short "ICVPN". The registry of the ICVPN includes all the DNS information such as the Top level domains (TLDs) used inside ICVPN and the reverse DNS for the IP ranges of the ICVPN. Additionally, it includes the TLDs of some other networks that are interconnected with dn42 and share some of the IP space of ICVPN. The ICVPN <a href="https://github.com/freifunk/icvpn-meta">repository</a> includes a handy script to automatically generate all the required zones.</p>
+
+<h2><a class="anchor" id="bind" href="#bind"></a>BIND</h2>
+
+<p>If you already run a local DNS server, you can tell it to query the dn42 anycast servers for the relevant domains
+by adding the following to /etc/bind/named.conf.local</p>
+
+<pre class="highlight"><code>zone "dn42" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+};
+zone "20.172.in-addr.arpa" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+};
+zone "21.172.in-addr.arpa" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+};
+zone "22.172.in-addr.arpa" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+};
+zone "23.172.in-addr.arpa" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+};
+zone "10.in-addr.arpa" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+};
+zone "d.f.ip6.arpa" {
+  type forward;
+  forwarders { 172.20.0.53; fd42:d42:d42:54::1; };
+};
+
+# for reverse dns to work the following option must be set:
+options {
+  # [...]
+
+  # disable the integrated handling of RFC1918 and non-assigned IPv6 space reverse dns
+  empty-zones-enable no;
+
+  # [...]
+};</code></pre>
+
+<p><strong>Note</strong>: With DNSSEC enabled, bind might refuse to accept query results from the dn42 zone: <code>validating dn42/SOA: got insecure response; parent indicates it should be secure</code>.</p>
+
+<p>To disable DNSSEC validation only for certain TLDs include the following in the options section:
+</p><pre class="highlight"><code>options {
+  # [...]
+
+  validate-except {
+    "dn42";
+    "20.172.in-addr.arpa";
+    "21.172.in-addr.arpa";
+    "22.172.in-addr.arpa";
+    "23.172.in-addr.arpa";
+    "10.in-addr.arpa";
+    "d.f.ip6.arpa";
+  };
+
+  # [...]
+};</code></pre>
+
+<h2><a class="anchor" id="dnsmasq" href="#dnsmasq"></a>dnsmasq</h2>
+
+<p>If you are running dnsmasq under openwrt, you just have to add </p>
+
+<pre class="highlight"><code>config dnsmasq
+        option boguspriv '0'
+        option rebind_protection '1'
+        list rebind_domain 'dn42'
+        list server '/dn42/172.20.0.53'
+        list server '/20.172.in-addr.arpa/172.20.0.53'
+        list server '/21.172.in-addr.arpa/172.20.0.53'
+        list server '/22.172.in-addr.arpa/172.20.0.53'
+        list server '/23.172.in-addr.arpa/172.20.0.53'
+        list server '/10.in-addr.arpa/172.20.0.53'
+        list server '/d.f.ip6.arpa/fd42:d42:d42:54::1'
+</code></pre>
+
+<p>to <code>/etc/config/dhcp</code> and run <code>/etc/init.d/dnsmasq restart</code>. After that you are able to resolve <code>.dn42</code> 
+with the anycast DNS-Server, while your normal requests go to your standard DNS-resolver.</p>
+
+<p>Attention: If you go with the default config you'll have to disable "boguspriv" in the first dnsmasq config section.</p>
+
+<p>For normal dnsmasq use</p>
+
+<p></p><pre class="highlight"><code>server=/dn42/172.20.0.53
+server=/20.172.in-addr.arpa/172.20.0.53
+server=/21.172.in-addr.arpa/172.20.0.53
+server=/22.172.in-addr.arpa/172.20.0.53
+server=/23.172.in-addr.arpa/172.20.0.53
+server=/10.in-addr.arpa/172.20.0.53
+server=/d.f.ip6.arpa/fd42:d42:d42:54::1</code></pre>
+in <code>dnsmasq.conf</code>.
+
+<h2><a class="anchor" id="powerdns-recursor" href="#powerdns-recursor"></a>PowerDNS recursor</h2>
+
+<p>Add this to /etc/powerdns/recursor.conf (at least in Debian and CentOS), the <strong>forward-zone-recurse</strong> is <em><strong>one line</strong></em>.</p>
+
+<pre class="highlight"><code>dont-query=127.0.0.0/8, 192.168.0.0/16, ::1/128, fe80::/10
+forward-zones-recurse=dn42=172.20.0.53,hack=172.20.0.53,ffhh=172.20.0.53,ffac=172.20.0.53,020=172.20.0.53,adm=172.20.0.53,ffa=172.20.0.53,ffhb=172.20.0.53,ffc=172.20.0.53,ffda=172.20.0.53,ffdh=172.20.0.53,ff3l=172.20.0.53,fffl=172.20.0.53,ffffm=172.20.0.53,fffr=172.20.0.53,fffd=172.20.0.53,ffgl=172.20.0.53,fflln=172.20.0.53,ffbcd=172.20.0.53,ffbgl=172.20.0.53,ffgoe=172.20.0.53,ffgt=172.20.0.53,ffh=172.20.0.53,helgo=172.20.0.53,ffhef=172.20.0.53,ffj=172.20.0.53,ffka=172.20.0.53,ffki=172.20.0.53,ffhl=172.20.0.53,fflux=172.20.0.53,ffms=172.20.0.53,mueritz=172.20.0.53,ffnord=172.20.0.53,ffnw=172.20.0.53,ffoh=172.20.0.53,ffpb=172.20.0.53,ffpi=172.20.0.53,ffrade=172.20.0.53,ffrgb=172.20.0.53,ffrg=172.20.0.53,rzl=172.20.0.53,ffsaar=172.20.0.53,fftr=172.20.0.53,fftdf=172.20.0.53,ffwk=172.20.0.53,ffgro=172.20.0.53,ffwk=172.20.0.53,ffwp=172.20.0.53,ffw=172.20.0.53,20.172.in-addr.arpa=172.20.0.53,21.172.in-addr.arpa=172.20.0.53,22.172.in-addr.arpa=172.20.0.53,23.172.in-addr.arpa=172.20.0.53,31.172.in-addr.arpa=172.20.0.53,10.in-addr.arpa=172.20.0.53,c.f.ip6.arpa=172.20.0.53</code></pre>
+
+<h2><a class="anchor" id="maradns" href="#maradns"></a>MaraDNS</h2>
+
+<p>Put this in your mararc:</p>
+
+<pre class="highlight"><code>ipv4_alias["dn42_root"] = "172.20.0.53"
+root_servers["dn42."] = "dn42_root"
+root_servers["20.172.in-addr.arpa."] = "dn42_root"
+root_servers["21.172.in-addr.arpa."] = "dn42_root"
+root_servers["22.172.in-addr.arpa."] = "dn42_root"
+root_servers["23.172.in-addr.arpa."] = "dn42_root"
+root_servers["10.in-addr.arpa."] = "dn42_root"</code></pre>
+
+<h2><a class="anchor" id="unbound" href="#unbound"></a>Unbound</h2>
+
+<p>Make sure to disable <code>auto-trust-anchor-file</code> and manually configure <code>trust-anchor-file</code> to 
+point to a file with DNSKEY records for dn42.</p>
+
+<pre class="highlight"><code>server:
+      local-zone: "20.172.in-addr.arpa." nodefault
+      local-zone: "21.172.in-addr.arpa." nodefault
+      local-zone: "22.172.in-addr.arpa." nodefault
+      local-zone: "23.172.in-addr.arpa." nodefault
+      local-zone: "10.in-addr.arpa." nodefault
+      local-zone: "d.f.ip6.arpa." nodefault
+
+forward-zone: 
+      name: "dn42"
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
+
+forward-zone: 
+      name: "20.172.in-addr.arpa"
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
+
+forward-zone: 
+      name: "21.172.in-addr.arpa"
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
+
+forward-zone: 
+      name: "22.172.in-addr.arpa"
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
+
+forward-zone: 
+      name: "23.172.in-addr.arpa"
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
+
+forward-zone: 
+      name: "10.in-addr.arpa"
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53
+
+forward-zone:
+      name: "d.f.ip6.arpa"
+      forward-addr: fd42:d42:d42:54::1
+      forward-addr: 172.20.0.53</code></pre>
+
+<h2><a class="anchor" id="junos-srx-12-1x46" href="#junos-srx-12-1x46"></a>JunOS (SRX 12.1X46)</h2>
+
+<p>Should also work in 12.1X44 and 12.1X45. After making the changes below you may need to run:
+</p><pre class="highlight"><code>restart named-service</code></pre>
+Config (vlan.0 is presumed to be your LAN/Trust interface)
+<pre class="highlight"><code>system {
+   services {
+      dns {
+         dns-proxy {
+            interface {
+               vlan.0;
+            }
+        default-domain dn42 {
+           forwarders {
+              172.20.0.53;
+	      fd42:d42:d42:54::1;
+           }
+        }
+        default-domain 20.172.in-addr.arpa {
+               forwarders {
+                  172.20.0.53;
+		  fd42:d42:d42:54::1;
+               }
+            }
+        default-domain 21.172.in-addr.arpa {
+               forwarders {
+                  172.20.0.53;
+		  fd42:d42:d42:54::1;
+               }
+            }
+        default-domain 22.172.in-addr.arpa {
+               forwarders {
+                  172.20.0.53;
+		  fd42:d42:d42:54::1;
+               }
+            }
+            default-domain 23.172.in-addr.arpa {
+               forwarders {
+                  172.20.0.53;
+                  fd42:d42:d42:54::1;
+               }
+            }
+            default-domain 10.in-addr.arpa {
+               forwarders {
+                  172.20.0.53;
+                  fd42:d42:d42:54::1;
+               }
+            }
+         }
+      }
+   }
+}</code></pre>
+
+<h2><a class="anchor" id="ms-dns" href="#ms-dns"></a>MS DNS</h2>
+
+<p>Add a "Conditional Forward" (de: "Bedingte Weiterleitung") for each of "dn42", "20.172.in-addr.arpa", "21.172.in-addr.arpa", "22.172.in-addr.arpa", "23.172.in-addr.arpa", "10.in-addr.arpa" using 172.20.0.53 as forwarder. Ignore the error message that the server is not authoritative.</p>
+
+<h1><a class="anchor" id="resolver-setup" href="#resolver-setup"></a>Resolver setup</h1>
+
+<p>Configuration of common resolver softwares to do full recursion DNS queries for <code>.dn42</code> (and reverse DNS) IPv4 and IPv6 anycast services.</p>
+
+<p>You can use any *.delegation-servers.dn42 (where * is a letter) as an authoritative server for .dn42 TLD. The current list is available at the <a href="https://git.dn42.dev/dn42/registry/src/master/data/dns/delegation-servers.dn42">DN42 registry</a> or through querying NS records of dn42.:</p>
+
+<pre class="highlight"><code>dig dn42. NS @172.20.0.53</code></pre>
+
+<p>Current list of delegation servers (as of 03/04/2022):</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>IPv4</th>
+<th>IPv6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>b.delegation-servers.dn42</td>
+<td>172.20.129.1</td>
+<td>fd42:4242:2601:ac53::1</td>
+</tr>
+<tr>
+<td>j.delegation-servers.dn42</td>
+<td>172.20.1.254</td>
+<td>fd42:5d71:219:0:216:3eff:fe1e:22d6</td>
+</tr>
+<tr>
+<td>k.delegation-servers.dn42</td>
+<td>172.20.14.34</td>
+<td>fdcf:8538:9ad5:1111::2</td>
+</tr>
+</tbody>
+</table>
+
+<p>All the examples here list 172.20.129.1/fd42:4242:2601:ac53::1, but users are encouraged to configure
+multiple services from *.delegation-servers.dn42 for redundancy. </p>
+
+<h2><a class="anchor" id="dnssec" href="#dnssec"></a>Dnssec</h2>
+
+<p>All delegation servers have DNSSEC support and all record are signed, for more information about DNSSEC visit <a href="../New-DNS-2.html#dnssec">New-DNS#dnssec</a>.</p>
+
+<p>Following is a list of links to the DS record for TLD and reverse zone, to configure the key file, extract the value of ds-rdata and format it as follows, you must add all ds-rdata to the key file for dnssec to work. P.S. each ds-rdata or DS record should contain 4 numbers.</p>
+
+<p>This is an example for dn42. and (fake) ds-rdata of 1 2 3 456
+</p><pre class="highlight"><code>dn42.	86400	IN	DS	1 2 3 456</code></pre>
+
+<p>This is an example for 172.20.0.0/16 and (fake) ds-rdata of 1 2 3 456
+</p><pre class="highlight"><code>20.172.in-addr.arpa.	86400	IN	DS	1 2 3 456</code></pre>
+
+<p>This is an example for fd00::/8 and (fake) ds-rdata of 1 2 3 456
+</p><pre class="highlight"><code>d.f.ip6.arpa.	86400	IN	DS	1 2 3 456</code></pre>
+
+<h3><a class="anchor" id="dn42-ds-record" href="#dn42-ds-record"></a>DN42 DS record</h3>
+
+<p><a href="https://git.dn42.dev/dn42/registry/src/branch/master/data/dns/dn42">dn42. TLD</a></p>
+
+<p><a href="https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.20.0.0_16">172.20.0.0/16 range</a></p>
+
+<p><a href="https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.21.0.0_16">172.21.0.0/16 range</a></p>
+
+<p><a href="https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.22.0.0_16">172.22.0.0/16 range</a></p>
+
+<p><a href="https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.23.0.0_16">172.23.0.0/16 range</a></p>
+
+<p><a href="https://git.dn42.dev/dn42/registry/src/branch/master/data/inet6num/fd00::_8">fd00::/8 range</a></p>
+
+<h3><a class="anchor" id="non-dn42-ds-record" href="#non-dn42-ds-record"></a>Non DN42 DS record</h3>
+
+<p><a href="https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/172.31.0.0_16">172.31.0.0/16 (chaosvpn) range</a></p>
+
+<p><a href="https://git.dn42.dev/dn42/registry/src/branch/master/data/inetnum/10.0.0.0_8">10.0.0.0/8 (Freifunk) range</a></p>
+
+<h2><a class="anchor" id="unbound-1" href="#unbound-1"></a>Unbound</h2>
+
+<pre class="highlight"><code>trust-anchor-file: &lt;path to key file&gt;
+
+server:
+local-zone: "dn42" typetransparent
+local-zone: "20.172.in-addr.arpa" typetransparent
+local-zone: "21.172.in-addr.arpa" typetransparent
+local-zone: "22.172.in-addr.arpa" typetransparent
+local-zone: "23.172.in-addr.arpa" typetransparent
+local-zone: "d.f.ip6.arpa" typetransparent
+
+private-domain: "dn42"
+private-domain: "20.172.in-addr.arpa"
+private-domain: "21.172.in-addr.arpa"
+private-domain: "22.172.in-addr.arpa"
+private-domain: "23.172.in-addr.arpa"
+private-domain: "d.f.ip6.arpa"
+
+stub-zone:
+	name: "dn42"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+stub-zone:
+	name: "20.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone:
+	name: "21.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone:
+	name: "22.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone:
+	name: "23.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone: 
+    name: "23.172.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone: 
+      name: "10.in-addr.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+
+stub-zone:
+	name: "d.f.ip6.arpa"
+	stub-addr: fd42:4242:2601:ac53::1
+	stub-addr: 172.20.129.1
+</code></pre>
+
+	      </div>
+          <div id="wiki-sidebar" class="Box Box--condensed float-md-left col-md-3">
+	        <div id="sidebar-content" class="gollum-markdown-content markdown-body px-4">
+	          <ul>
+<li>
+<a href="../../Home.html" rel="nofollow">Home</a>
+
+<ul>
+<li><a href="../../howto/Getting-Started.html" rel="nofollow">Getting Started</a></li>
+<li><a href="../../howto/Registry-Authentication.html" rel="nofollow">Registry Authentication</a></li>
+<li><a href="../../howto/Address-Space.html" rel="nofollow">Address Space</a></li>
+<li><a href="../../howto/Bird-communities.html" rel="nofollow">BGP communities</a></li>
+<li><a href="../../FAQ.html" rel="nofollow">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<p>How-To</p>
+
+<ul>
+<li><a href="../../howto/wireguard.html" rel="nofollow">Wireguard</a></li>
+<li><a href="../../howto/openvpn.html" rel="nofollow">Openvpn</a></li>
+<li><a href="../../howto/IPsec-with-PublicKeys.html" rel="nofollow">IPsec With Public Keys</a></li>
+<li><a href="../../howto/tinc.html" rel="nofollow">Tinc</a></li>
+<li><a href="../../howto/GRE-on-FreeBSD.html" rel="nofollow">GRE on FreeBSD</a></li>
+<li><a href="../../howto/GRE-on-OpenBSD.html" rel="nofollow">GRE on OpenBSD</a></li>
+<li><a href="../../howto/IPv6-Multicast.html" rel="nofollow">IPv6 Multicast (PIM-SM)</a></li>
+<li>
+<a href="../../howto/Bird.html" rel="nofollow">Bird</a> / <a href="../../howto/Bird2.html" rel="nofollow">Bird2</a>
+</li>
+<li><a href="../../howto/Quagga.html" rel="nofollow">Quagga</a></li>
+<li><a href="../../howto/OpenBGPD.html" rel="nofollow">OpenBGPD</a></li>
+<li><a href="../../howto/mikrotik.html" rel="nofollow">Mikrotik RouterOS</a></li>
+<li><a href="../../howto/EdgeOS-Config.html" rel="nofollow">EdgeRouter</a></li>
+<li><a href="../../howto/Static-routes-on-Windows.html" rel="nofollow">Static routes on Windows</a></li>
+<li><a href="../../howto/networksettings.html" rel="nofollow">Universal Network Requirements</a></li>
+<li><a href="../../howto/vyos.html" rel="nofollow">VyOS</a></li>
+<li><a href="../../howto/nixos.html" rel="nofollow">NixOS</a></li>
+</ul>
+</li>
+<li>
+<p>Services</p>
+
+<ul>
+<li><a href="../IRC.html" rel="nofollow">IRC</a></li>
+<li><a href="../Whois.html" rel="nofollow">Whois registry</a></li>
+<li><a href="../DNS.html" rel="nofollow">DNS</a></li>
+<li><a href="../Clearnet-Domains.html" rel="nofollow">Public DNS</a></li>
+<li><a href="../Looking-Glasses.html" rel="nofollow">Looking Glasses</a></li>
+<li><a href="../Automatic-Peering.html" rel="nofollow">Automatic Peering</a></li>
+<li><a href="../Repository-Mirrors.html" rel="nofollow">Repository Mirrors</a></li>
+<li><a href="../Distributed-Wiki.html" rel="nofollow">Distributed Wiki</a></li>
+<li><a href="../Certificate-Authority.html" rel="nofollow">Certificate Authority</a></li>
+<li><a href="../Route-Collector.html" rel="nofollow">Route Collector</a></li>
+</ul>
+</li>
+<li>
+<p>Internal</p>
+
+<ul>
+<li><a href="../../internal/Internal-Services.html" rel="nofollow">Internal services</a></li>
+<li><a href="../../internal/Interconnections.html" rel="nofollow">Interconnections</a></li>
+<li><a href="../../internal/APIs.html" rel="nofollow">APIs</a></li>
+<li>
+<a href="../../internal/ShowAndTell.html" rel="nofollow">Show and Tell</a><br />
+</li>
+<li><a href="../../internal/Historical-Services.html" rel="nofollow">Historical services</a></li>
+</ul>
+</li>
+<li>
+<p>External Tools</p>
+
+<ul>
+<li><a href="https://paste.dn42.us/" rel="nofollow">Paste Board</a></li>
+<li><a href="https://git.dn42.dev/" rel="nofollow">Git Repositories</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="wiki-footer" class="gollum-markdown-content my-2">
+	    <div id="footer-content" class="Box Box-condensed markdown-body px-4">
+	      <p>Hosted by: <a href="mailto:xuu@sour.is" rel="nofollow">xuu</a>, <a href="mailto:nurtic-vibe@grmml.net" rel="nofollow">nurtic-vibe</a>, <a href="mailto:tom@xcv.vc" rel="nofollow">toBee</a>, <a href="mailto:dn42@burble.com" rel="nofollow">burble</a> | Accessible via: <a href="https://wiki.dn42/" rel="nofollow">dn42</a>, <a href="https://dn42.eu/" rel="nofollow">dn42.eu</a>, <a href="https://dn42.dev/" rel="nofollow">dn42.dev</a></p>
+
+	    </div>
+	  </div>
+
+
+	</div>
+
+
+	<div id="footer" class="pt-4">
+		  <p id="last-edit"><div class="dotted-spinner hidden"></div> <a id="page-info-toggle" data-pagepath="services/dns/Configuration.md">When was this page last modified?</a></p>
+	</div>
+
+
+</div>
+
+<form name="rename" method="POST" action="http://127.0.0.1:4567/gollum/rename/services/dns/Configuration.md">
+  <input type="hidden" name="rename"/>
+  <input type="hidden" name="message"/>
+</form>
+
+</div>
+</div>
+</body>
+
+<!-- Mirrored from 127.0.0.1:4567/services/dns/Configuration by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:49 GMT -->
+</html>

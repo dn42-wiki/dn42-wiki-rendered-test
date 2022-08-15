@@ -1,0 +1,53 @@
+
+#sidebar-content ul {
+    margin: 0 !important;
+}
+
+#sidebar-content li+li {
+    margin: 0;
+}
+
+#sidebar-content .markdown-body {
+    padding: 0 !important;
+}
+
+#wiki-body .markdown-body {
+    padding: 0 !important;
+}
+
+.Box {
+    background-color: #f7f7f7;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid #ddd;
+}
+
+.toc {
+    background-color: #f7f7f7;
+}
+
+#sidebar-content {
+    padding: 7px !important;
+}
+
+#wiki-sidebar .Box {
+    margin-left: 3%;
+}
+
+#footer-content {
+    margin-top: 1.5em;
+}
+
+#wiki-header #header-content {
+    background-color: #f7f7f7;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid #ddd;
+    margin-bottom: 1.5em;
+}
+
+#header-content img {
+    background-color: #f7f7f7;
+    padding: 5px;
+}
+

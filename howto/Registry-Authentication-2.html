@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/Registry-Authentication.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/app-309be032396e783b13a47df58f389b7c8e11c2b2d42640560b874f677c25f6e5.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/print-512498c368be0d3fb1ba105dfa84289ae48380ec9fcbef948bd4e23b0b095bfb.css" media="print">
+
+  <link rel="stylesheet" type="text/css" href="../custom.css" media="all">
+  
+
+  <script>
+  var criticMarkup = '';
+	var baseUrl = '';
+  var showLocalTime = false;
+	var uploadDest = 'uploads';
+	var perPageUploads = '';
+	if (perPageUploads == 'true') {
+	  uploadDest = uploadDest + window.location.pathname.replace(/.*gollum\/[-\w]+\//, "/").replace(/\.[^/.]+$/, "").replace(baseUrl, "")
+	}
+	  var pageFullPath = 'howto/Registry-Authentication.md';
+    var pageFormat   = 'markdown';
+
+  </script>
+  <script src="../gollum/assets/app-f05401ee374f0c7f48fc2bc08e30b4f4db705861fd5895ed70998683b383bfb5.js" type="text/javascript"></script>
+  
+
+  <title>Registry-Authentication</title>
+</head>
+<body>
+<div class="container-lg clearfix">
+<div id="wiki-wrapper" class="page">
+<div id="head">
+	<nav class="TableObject
+            actions
+            border-bottom
+            border-md-0
+            p-2
+            pt-lg-4
+            px-lg-0
+            overflow-x-scroll">
+  <div class="TableObject-item hide-lg hide-xl">
+    <details class="details-reset details-overlay">
+      <summary class="btn btn-invisible" aria-haspopup="true">
+        <span aria-label="Open menu">☰</span>
+      </summary>
+    
+      <div class="SelectMenu mx-sm-2">
+        <div class="SelectMenu-modal">
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Current Page</h2>
+            <div>Registry-Authentication</div>
+          </div>
+    
+            <a
+              class="SelectMenu-item"
+              href="../gollum/history/howto/Registry-Authentication.html"
+              role="menuitem"
+            >
+              <span>History</span>
+            </a>
+    
+    
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Main Menu</h2>
+          </div>
+    
+          <div class="SelectMenu-list">
+            <a class="SelectMenu-item" role="menuitem" href="../index.html">
+              Home
+            </a>
+    
+              <a class="SelectMenu-item" role="menuitem" href="../gollum/overview.html">
+                Overview
+              </a>
+    
+              <a
+                class="SelectMenu-item"
+                href="../gollum/latest_changes.html"
+                role="menuitem"
+              >
+                Latest Changes
+              </a>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <a class="btn btn-sm" id="minibutton-home" href="../index.html">
+      Home
+    </a>
+  </div>
+
+  <div
+    class="TableObject-item TableObject-item--primary px-2"
+    
+  >
+    <form class="search-form" action="http://127.0.0.1:4567/gollum/search" method="get" id="search-form">
+    	<input type="text" class="form-control input-block" name="q" id="search-query" placeholder="Search" aria-label="Search site" autocomplete="off">
+    </form>  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/overview.html"
+          id="minibutton-overview"
+        >
+          Overview
+        </a>
+
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/latest_changes.html"
+          id="minibutton-latest-changes"
+        >
+          Latest Changes
+        </a>
+    </div>
+  </div>
+
+  <div class="TableObject-item px-2">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm hide-sm hide-md"
+          href="../gollum/history/howto/Registry-Authentication.md/index.html"
+          id="minibutton-history"
+        >
+          History
+        </a>
+
+    </div>
+  </div>
+
+</nav>
+
+</div>
+
+<div id="wiki-content" class="px-2 px-lg-0">
+  <h1 class="header-title text-center text-md-left pt-4">
+    Registry-Authentication
+  </h1>
+	<div class="breadcrumb"><nav aria-label="Breadcrumb"><ol>
+<li class="breadcrumb-item"><a href="../gollum/overview/howto/index.html">howto</a></li>
+</ol></nav></div>
+
+	<div class="has-header has-footer has-sidebar has-rightbar">
+	  <div id="wiki-body" class="gollum-markdown-content">
+	    <div id="wiki-header" class="gollum-markdown-content">
+	      <div id="header-content" class="markdown-body">
+	        <p><a href="../index.html" rel="nofollow"><img src="../dn42.png" alt="dn42" /></a></p>
+
+	      </div>
+	    </div>
+	    <div class="main-content clearfix container-lg">
+	      <div class="markdown-body  float-md-left col-md-9" >
+	        
+	        <h1><a class="anchor" id="how-authentication-works" href="#how-authentication-works"></a>How Authentication Works</h1>
+
+<p><code>auth</code> attributes within registry <code>mntner</code> objects define a public key that is used to verify the identity of the maintainer and prove that changes to registry objects are authorised.</p>
+
+<p>When a pull request is submitted to the registry, the submitter signs the git commit hash with their private key. The registry maintainers will then check the signature against the registered public key to authorise the change. </p>
+
+<p>The signature and verification process varies depending on the type of public key within the <code>auth</code> attribute.</p>
+
+<h2><a class="anchor" id="preferred-signing-methods" href="#preferred-signing-methods"></a>Preferred signing methods</h2>
+
+<p><em>Tip: Add your GPG or SSH key to your account in gitea, doing so enables gitea to automatically check your signature when you sign the commit</em></p>
+
+<h3><a class="anchor" id="when-using-a-gpg-pgp-key" href="#when-using-a-gpg-pgp-key"></a>When using a GPG/PGP Key</h3>
+
+<ol>
+<li>
+<strong>Sign the commit using git</strong> - this is the best option as the signature is recorded directly in the git log </li>
+<li>Sign using <code>gpg --clearsign</code> and provide the signature in the PR comments - only do this if you absolutely cannot sign the commit in git</li>
+</ol>
+
+<h3><a class="anchor" id="when-using-an-ssh-key" href="#when-using-an-ssh-key"></a>When using an SSH key</h3>
+
+<ol>
+<li>
+<strong>Sign the commit using git</strong> - git &gt;= 2.34.0 can now sign commits using ssh keys, this is the best option if you able to do so</li>
+<li>Use the <code>sign-my-commit</code> script in the registry - the script adds your signature in a format that allows for automated checking</li>
+<li>Manually provide a signature in the PR comments using one of the methods detailed below - only do this if you can't sign using git or with the included script</li>
+</ol>
+
+<p>The sections below provide detailed instructions for each of the auth methods.</p>
+
+<hr />
+
+<h2><a class="anchor" id="finding-the-commit-hash" href="#finding-the-commit-hash"></a>Finding the commit hash</h2>
+
+<p><code>git log</code> will list all the recent commits and show the commit hash:
+</p><pre class="highlight"><code>commit 6e2e9ac540e2e4e3c3a135ad90c8575bb8fa1784 (HEAD -&gt; master)
+Author: foo &lt;foo@baz.com&gt;
+Date:   Mon Jan 01 01:01:01 2020 +0000
+
+    Change some stuff</code></pre>
+
+<p>In this case the full commit hash is <code>6e2e9ac540e2e4e3c3a135ad90c8575bb8fa1784</code></p>
+
+<hr />
+
+<h2><a class="anchor" id="authentication-using-a-gpg-pgp-key" href="#authentication-using-a-gpg-pgp-key"></a>Authentication using a GPG/PGP Key</h2>
+
+<p>To verify your key, the registry maintainers need to be able to find your full public key.<br />
+There are three options for doing this. but you only need to do <strong>one</strong> of these:  </p>
+
+<ol>
+<li>
+<strong>Add your public key to your account in gitea</strong> - this is the best option as gitea will automatically check your signature</li>
+<li>Upload your key to a public key server </li>
+<li>Create a <code>key-cert</code> object in the registry containing your public key</li>
+</ol>
+
+<h3><a class="anchor" id="auth-attribute-format-when-your-public-key-is-in-gitea-or-a-public-keyserver" href="#auth-attribute-format-when-your-public-key-is-in-gitea-or-a-public-keyserver"></a>
+<code>auth</code> attribute format, when your public key is in gitea or a public keyserver</h3>
+
+<ul>
+<li><p>Use the following <code>auth</code> attribute in your <code>mntner</code> object:
+</p><pre class="highlight"><code>auth:               pgp-fingerprint &lt;fingerprint&gt;</code></pre>
+Where <code>&lt;fingerprint&gt;</code> is your <strong>full 40-digit</strong> key fingerprint, without spaces.</li>
+<li><p>Ensure that your public key has been uploaded to your account in gitea or a public keyserver, e.g. <a href="https://sks-keyservers.net/">SKS</a>, <a href="https://keys.openpgp.org/">OpenPGP</a>, <a href="https://keybase.io/">keybase</a>.</p></li>
+</ul>
+
+<h3><a class="anchor" id="auth-attribute-format-when-creating-a-key-cert-object" href="#auth-attribute-format-when-creating-a-key-cert-object"></a>
+<code>auth</code> attribute format when creating a <code>key-cert</code> object</h3>
+
+<p><em>Tip: look at the existing key-cert objects for examples of how to add your public key</em></p>
+
+<ul>
+<li><p>In this case the <code>auth</code> attribute must refer to the new key-cert object so use the following in your <code>mntner</code> object:
+</p><pre class="highlight"><code>auth:               PGPKEY-&lt;short fingerprint&gt;</code></pre>
+Where <code>&lt;short fingerprint&gt;</code> is the last <strong>8</strong> digits from your key fingerprint.</li>
+<li><p>Create a <code>key-cert</code> object for your public key, using <code>PGPKEY-&lt;fprint&gt;</code> for the filename.</p></li>
+</ul>
+
+<h3><a class="anchor" id="how-to-sign-your-commit" href="#how-to-sign-your-commit"></a>How to sign your commit</h3>
+
+<p><em>Tip: There are many public guides available with step by step instructions on how to sign commits, e.g. <a href="https://help.github.com/en/github/authenticating-to-github/signing-commits">github guide</a></em></p>
+
+<ul>
+<li><p>Use <code>git commit -S</code> to commit and sign your change.</p></li>
+<li><p>If you have already committed your change without signing it, you can sign the existing commit using:
+</p><pre class="highlight"><code>git commit --amend --no-edit -S</code></pre>
+If you had already pushed your change to gitea, you must also do a force push (<code>git push --force</code>) to update the remote copy.</li>
+</ul>
+
+<h3><a class="anchor" id="verifying-the-signature" href="#verifying-the-signature"></a>Verifying the signature</h3>
+
+<ul>
+<li>Use <code>git log --show-signature</code> to show recent commits and signatures</li>
+<li>If you have uploaded your key to gitea, you can also check in the gitea UI that your commit is signed and has been verified successfully </li>
+</ul>
+
+<hr />
+
+<h2><a class="anchor" id="authentication-using-an-ssh-key" href="#authentication-using-an-ssh-key"></a>Authentication using an SSH key</h2>
+
+<p>Older versions of git and ssh don't support generic ssh signing so there are multiple ways of providing ssh signatures based on the versions you have and the type of key you are using. The newer signature methods are preferred as they allow automatic verification of your signature.</p>
+
+<p>In preference order:</p>
+
+<ol>
+<li><strong>Sign using git</strong></li>
+<li>Sign using the included <code>sign-my-commit</code> script</li>
+</ol>
+
+<p>If you cannot get the above to work you may also: </p>
+
+<ol>
+<li>Manually sign using the generic ssh-keygen method</li>
+<li>Manual sign using specific methods for rsa or ecdsa</li>
+</ol>
+
+<h3><a class="anchor" id="auth-attribute-format-when-using-an-ssh-key" href="#auth-attribute-format-when-using-an-ssh-key"></a>
+<code>auth</code> attribute format when using an ssh key</h3>
+
+<p>The generic format for authentication using an SSH key is as follows:
+</p><pre class="highlight"><code>auth:               ssh-&lt;keytype&gt; &lt;pubkey&gt;</code></pre>
+
+<p>Common examples:</p>
+
+<pre class="highlight"><code>auth:               ssh-ed25519 &lt;pubkey&gt;</code></pre>
+
+<pre class="highlight"><code>auth:               ssh-rsa &lt;pubkey&gt;</code></pre>
+
+<p><em>Tip: look in the existing registry objects for examples</em></p>
+
+<h3><a class="anchor" id="signing-using-git" href="#signing-using-git"></a>Signing using git</h3>
+
+<p>If you have git &gt;= 2.34.0 you can now sign git commits directly with an SSH key.</p>
+
+<p>Brief instructions are below, however there are also more detailed guides available on how to do this, e.g. <a href="https://blog.dbrgn.ch/2021/11/16/git-ssh-signatures/">here</a> or <a href="https://calebhearth.com/sign-git-with-ssh">here</a></p>
+
+<h4><a class="anchor" id="configuration" href="#configuration"></a>Configuration</h4>
+
+<ul>
+<li>Set your git signature format to be SSH</li>
+</ul>
+
+<pre class="highlight"><code>git config --global gpg.format ssh</code></pre>
+
+<ul>
+<li>Tell git which SSH key to use</li>
+</ul>
+
+<pre class="highlight"><code>git config --global user.signingKey '&lt;ssh public key&gt;'</code></pre>
+
+<h4><a class="anchor" id="how-to-sign" href="#how-to-sign"></a>How to sign</h4>
+
+<p>Once configured, you can now use git to sign your commit as normal:</p>
+
+<ul>
+<li><p>Use <code>git commit -S</code> to commit and sign your change.</p></li>
+<li><p>If you have already committed your change without signing it, you can sign the existing commit using:
+</p><pre class="highlight"><code>git commit --amend --no-edit -S</code></pre>
+If you had already pushed your change to gitea, you must also do a force push (<code>git push --force</code>) to update the remote copy.</li>
+</ul>
+
+<h4><a class="anchor" id="verifying-the-signature-1" href="#verifying-the-signature-1"></a>Verifying the signature</h4>
+
+<p>Verifying an ssh signature is slightly more complicated than with gpg keys, please see the guides linked above.</p>
+
+<p>The easiest way to verify your signature is to ensure your SSH key is uploaded then push your changes to gitea. Gitea will automatically verify your signature for you and show if it was successful in the UI. </p>
+
+<h3><a class="anchor" id="sign-using-the-sign-my-commit-script" href="#sign-using-the-sign-my-commit-script"></a>Sign using the <code>sign-my-commit</code> script</h3>
+
+<p>The registry includes a script that uses ssh-keygen signatures to sign your changes in a format that allows for automatic verification. It requires ssh-keygen &gt;= v8. </p>
+
+<p><em>Tip: use <code>./sign-my-commit --help</code> to see all options</em></p>
+
+<h4><a class="anchor" id="how-to-sign-1" href="#how-to-sign-1"></a>How to sign</h4>
+
+<pre class="highlight"><code>./sign-my-commit --ssh --key &lt;path to your SSH private key&gt; --push &lt;MNTNER&gt;</code></pre>
+
+<p>e.g.</p>
+
+<pre class="highlight"><code>./sign-my-commit --ssh -key /home/foo/.ssh/id_ed25519 --push FOO-MNT</code></pre>
+
+<h4><a class="anchor" id="verifying-the-signature-2" href="#verifying-the-signature-2"></a>Verifying the signature</h4>
+
+<p>The script can also verify your signature:</p>
+
+<pre class="highlight"><code>./sign-my-commit --ssh --verify &lt;MNTNER&gt;</code></pre>
+
+<h3><a class="anchor" id="manually-signing-using-ssh-keygen" href="#manually-signing-using-ssh-keygen"></a>Manually signing using ssh-keygen</h3>
+
+<p><em>Please only manually sign if you cannot use either of the automated methods</em></p>
+
+<p>OpenSSH v8 introduced new functionality for creating signatures using SSH keys. If you have an older version, you can compile the latest version of ssh-keygen from the <a href="https://github.com/openssh/openssh-portable">openssh-portable repo</a>.</p>
+
+<h4><a class="anchor" id="how-to-sign-2" href="#how-to-sign-2"></a>How to sign</h4>
+
+<p>Use the following to sign the latest <code>&lt;commit hash&gt;</code> (that you found using <code>git log</code>)
+</p><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"&lt;commit hash&gt;"</span> | ssh-keygen <span class="nt">-Y</span> sign <span class="nt">-f</span> &lt;private key file&gt; <span class="nt">-n</span> dn42</code></pre>
+
+<p>Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. </p>
+
+<h4><a class="anchor" id="verifying-the-signature-3" href="#verifying-the-signature-3"></a>Verifying the signature</h4>
+
+<p>The following procedure will verify the signature (using the <code>&lt;commit hash&gt;</code>, your <code>&lt;pubkey&gt;</code> and the <code>&lt;signature&gt;</code> generated in the previous step. </p>
+
+<p>Create a temporary file containing the signature
+</p><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"&lt;signature&gt;"</span> <span class="o">&gt;</span> sig.tmp</code></pre>
+Create a temporary 'allowed users' file
+<pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"YOU-MNT ssh-&lt;keytype&gt; &lt;pubkey&gt;"</span> <span class="o">&gt;</span> allowed.tmp</code></pre>
+Verify the signature
+<pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"&lt;commit hash&gt;"</span> | <span class="se">\</span>
+    ssh-keygen <span class="nt">-Y</span> verify <span class="nt">-f</span> allowed.tmp <span class="nt">-n</span> dn42 <span class="nt">-I</span> YOU-MNT <span class="nt">-s</span> sig.tmp</code></pre>
+
+<hr />
+
+<h3><a class="anchor" id="manually-signing-ssh-legacy-methods" href="#manually-signing-ssh-legacy-methods"></a>Manually signing - SSH legacy methods</h3>
+
+<p><strong>Only use the methods below if you cannot use any of the previous signature methods</strong></p>
+
+<p>Please try and upgrade your ssh-keygen version and use the generic ssh-keygen method first.</p>
+
+<hr />
+
+<h3><a class="anchor" id="authentication-with-an-ssh-rsa-key" href="#authentication-with-an-ssh-rsa-key"></a>Authentication with an SSH RSA key</h3>
+
+<ul>
+<li>Use the following <code>auth</code> attribute in your <code>mntner</code> object:
+<pre class="highlight"><code>auth:               ssh-rsa &lt;pubkey&gt;</code></pre>
+Where <code>&lt;pubkey&gt;</code> is the ssh public key copied from your id_rsa.pub file. </li>
+</ul>
+
+<h4><a class="anchor" id="signing-your-commits" href="#signing-your-commits"></a>Signing your commits</h4>
+
+<p>If you cannot use the generic SSH process described above then RSA signatures can also be created using openssl.</p>
+
+<p>Use the following to sign your <code>&lt;commit hash&gt;</code> (that you found using <code>git log</code>)
+</p><pre class="highlight"><code>openssl pkeyutl <span class="se">\</span>
+   <span class="nt">-sign</span> <span class="se">\</span>
+   <span class="nt">-inkey</span> ~/.ssh/id_rsa <span class="se">\</span>
+   <span class="nt">-in</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"&lt;commit hash&gt;"</span><span class="o">)</span> | <span class="nb">base64</span></code></pre>
+
+<p>Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. </p>
+
+<h4><a class="anchor" id="verifying-the-signature-4" href="#verifying-the-signature-4"></a>Verifying the signature</h4>
+
+<p>The following script will verify the signature (using the <code>&lt;commit hash&gt;</code>, your rsa <code>&lt;pubkey&gt;</code> and the <code>&lt;signature&gt;</code> generated in the previous step. 
+</p><pre class="highlight"><code>openssl pkeyutl <span class="se">\</span>
+   <span class="nt">-verify</span> <span class="se">\</span>
+   <span class="nt">-pubin</span> <span class="se">\</span>
+   <span class="nt">-in</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"&lt;commit hash&gt;"</span><span class="o">)</span> <span class="se">\</span>
+   <span class="nt">-inkey</span> &lt;<span class="o">(</span>ssh-keygen <span class="se">\</span>
+               <span class="nt">-e</span> <span class="se">\</span>
+               <span class="nt">-m</span> PKCS8 <span class="se">\</span>
+               <span class="nt">-f</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"ssh-rsa &lt;pubkey&gt;"</span><span class="o">)</span><span class="se">\</span>
+            <span class="o">)</span> <span class="se">\</span>
+   <span class="nt">-sigfile</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"&lt;signature&gt;"</span> | <span class="nb">base64</span> <span class="nt">-d</span><span class="o">)</span></code></pre>
+
+<h3><a class="anchor" id="authentication-with-an-ssh-ecdsa-key" href="#authentication-with-an-ssh-ecdsa-key"></a>Authentication with an SSH ecdsa key</h3>
+
+<ul>
+<li>Use the following <code>auth</code> attribute in your <code>mntner</code> object:
+<pre class="highlight"><code>auth:               ecdsa-sha2-nistp256 &lt;pubkey&gt;</code></pre>
+Where <code>&lt;pubkey&gt;</code> is the ssh public key copied from your id_ecdsa.pub file. </li>
+</ul>
+
+<h4><a class="anchor" id="signing-your-commits-1" href="#signing-your-commits-1"></a>Signing your commits</h4>
+
+<p>If you cannot use the generic SSH process described above then ecdsa signatures can also be created using openssl.</p>
+
+<p><strong>DO NOT do this on your original ssh key.</strong><br />
+Make a copy and use the copy as the ssh-keygen command below will overwrite the key file given.</p>
+
+<p>Convert your private ssh key to a file that openssl can read:<br />
+<strong>DO THIS ON A COPY OF YOUR SSH KEY</strong>
+</p><pre class="highlight"><code>ssh-keygen <span class="nt">-p</span> <span class="nt">-m</span> pem <span class="nt">-f</span> &lt;private key file copy&gt;</code></pre>
+
+<p>Sign the commit hash using your ecdsa key, using openssl:
+</p><pre class="highlight"><code>openssl pkeyutl <span class="nt">-sign</span> <span class="se">\</span>
+    <span class="nt">-inkey</span> &lt;converted key file&gt; <span class="se">\</span>
+    <span class="nt">-in</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"&lt;commit hash&gt;"</span><span class="o">)</span> | <span class="nb">base64</span></code></pre>
+
+<p>Post the signature in to the 'Conversation' section of your pull request to allow the registry maintainers to verify it. It can help to also include the commit hash that you have signed, to avoid any confusion. </p>
+
+<h4><a class="anchor" id="verifying-the-signature-5" href="#verifying-the-signature-5"></a>Verifying the signature</h4>
+
+<p>The following script will verify the signature (using the <code>&lt;commit hash&gt;</code>, your ecdsa <code>&lt;pubkey&gt;</code> and the <code>&lt;signature&gt;</code> generated in the previous step. 
+</p><pre class="highlight"><code>openssl pkeyutl <span class="se">\</span>
+   <span class="nt">-verify</span> <span class="se">\</span>
+   <span class="nt">-pubin</span> <span class="se">\</span>
+   <span class="nt">-in</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"&lt;commit hash&gt;"</span><span class="o">)</span> <span class="se">\</span>
+   <span class="nt">-inkey</span> &lt;<span class="o">(</span>ssh-keygen <span class="se">\</span>
+               <span class="nt">-e</span> <span class="se">\</span>
+               <span class="nt">-m</span> PKCS8 <span class="se">\</span>
+               <span class="nt">-f</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"ecdsa-sha2-nistp256 &lt;pubkey&gt;"</span><span class="o">)</span><span class="se">\</span>
+            <span class="o">)</span> <span class="se">\</span>
+   <span class="nt">-sigfile</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">"&lt;signature&gt;"</span> | <span class="nb">base64</span> <span class="nt">-d</span><span class="o">)</span>  </code></pre>
+
+	      </div>
+          <div id="wiki-sidebar" class="Box Box--condensed float-md-left col-md-3">
+	        <div id="sidebar-content" class="gollum-markdown-content markdown-body px-4">
+	          <ul>
+<li>
+<a href="../Home.html" rel="nofollow">Home</a>
+
+<ul>
+<li><a href="Getting-Started.html" rel="nofollow">Getting Started</a></li>
+<li><a href="Registry-Authentication.html" rel="nofollow">Registry Authentication</a></li>
+<li><a href="Address-Space.html" rel="nofollow">Address Space</a></li>
+<li><a href="Bird-communities.html" rel="nofollow">BGP communities</a></li>
+<li><a href="../FAQ.html" rel="nofollow">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<p>How-To</p>
+
+<ul>
+<li><a href="wireguard.html" rel="nofollow">Wireguard</a></li>
+<li><a href="openvpn.html" rel="nofollow">Openvpn</a></li>
+<li><a href="IPsec-with-PublicKeys.html" rel="nofollow">IPsec With Public Keys</a></li>
+<li><a href="tinc.html" rel="nofollow">Tinc</a></li>
+<li><a href="GRE-on-FreeBSD.html" rel="nofollow">GRE on FreeBSD</a></li>
+<li><a href="GRE-on-OpenBSD.html" rel="nofollow">GRE on OpenBSD</a></li>
+<li><a href="IPv6-Multicast.html" rel="nofollow">IPv6 Multicast (PIM-SM)</a></li>
+<li>
+<a href="Bird.html" rel="nofollow">Bird</a> / <a href="Bird2.html" rel="nofollow">Bird2</a>
+</li>
+<li><a href="Quagga.html" rel="nofollow">Quagga</a></li>
+<li><a href="OpenBGPD.html" rel="nofollow">OpenBGPD</a></li>
+<li><a href="mikrotik.html" rel="nofollow">Mikrotik RouterOS</a></li>
+<li><a href="EdgeOS-Config.html" rel="nofollow">EdgeRouter</a></li>
+<li><a href="Static-routes-on-Windows.html" rel="nofollow">Static routes on Windows</a></li>
+<li><a href="networksettings.html" rel="nofollow">Universal Network Requirements</a></li>
+<li><a href="vyos.html" rel="nofollow">VyOS</a></li>
+<li><a href="nixos.html" rel="nofollow">NixOS</a></li>
+</ul>
+</li>
+<li>
+<p>Services</p>
+
+<ul>
+<li><a href="../services/IRC.html" rel="nofollow">IRC</a></li>
+<li><a href="../services/Whois.html" rel="nofollow">Whois registry</a></li>
+<li><a href="../services/DNS.html" rel="nofollow">DNS</a></li>
+<li><a href="../services/Clearnet-Domains.html" rel="nofollow">Public DNS</a></li>
+<li><a href="../services/Looking-Glasses.html" rel="nofollow">Looking Glasses</a></li>
+<li><a href="../services/Automatic-Peering.html" rel="nofollow">Automatic Peering</a></li>
+<li><a href="../services/Repository-Mirrors.html" rel="nofollow">Repository Mirrors</a></li>
+<li><a href="../services/Distributed-Wiki.html" rel="nofollow">Distributed Wiki</a></li>
+<li><a href="../services/Certificate-Authority.html" rel="nofollow">Certificate Authority</a></li>
+<li><a href="../services/Route-Collector.html" rel="nofollow">Route Collector</a></li>
+</ul>
+</li>
+<li>
+<p>Internal</p>
+
+<ul>
+<li><a href="../internal/Internal-Services.html" rel="nofollow">Internal services</a></li>
+<li><a href="../internal/Interconnections.html" rel="nofollow">Interconnections</a></li>
+<li><a href="../internal/APIs.html" rel="nofollow">APIs</a></li>
+<li>
+<a href="../internal/ShowAndTell.html" rel="nofollow">Show and Tell</a><br />
+</li>
+<li><a href="../internal/Historical-Services.html" rel="nofollow">Historical services</a></li>
+</ul>
+</li>
+<li>
+<p>External Tools</p>
+
+<ul>
+<li><a href="https://paste.dn42.us/" rel="nofollow">Paste Board</a></li>
+<li><a href="https://git.dn42.dev/" rel="nofollow">Git Repositories</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="wiki-footer" class="gollum-markdown-content my-2">
+	    <div id="footer-content" class="Box Box-condensed markdown-body px-4">
+	      <p>Hosted by: <a href="mailto:xuu@sour.is" rel="nofollow">xuu</a>, <a href="mailto:nurtic-vibe@grmml.net" rel="nofollow">nurtic-vibe</a>, <a href="mailto:tom@xcv.vc" rel="nofollow">toBee</a>, <a href="mailto:dn42@burble.com" rel="nofollow">burble</a> | Accessible via: <a href="https://wiki.dn42/" rel="nofollow">dn42</a>, <a href="https://dn42.eu/" rel="nofollow">dn42.eu</a>, <a href="https://dn42.dev/" rel="nofollow">dn42.dev</a></p>
+
+	    </div>
+	  </div>
+
+
+	</div>
+
+
+	<div id="footer" class="pt-4">
+		  <p id="last-edit"><div class="dotted-spinner hidden"></div> <a id="page-info-toggle" data-pagepath="howto/Registry-Authentication.md">When was this page last modified?</a></p>
+	</div>
+
+
+</div>
+
+<form name="rename" method="POST" action="http://127.0.0.1:4567/gollum/rename/howto/Registry-Authentication.md">
+  <input type="hidden" name="rename"/>
+  <input type="hidden" name="message"/>
+</form>
+
+</div>
+</div>
+</body>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/Registry-Authentication.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+</html>

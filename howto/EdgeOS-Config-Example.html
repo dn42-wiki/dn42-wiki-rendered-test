@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/EdgeOS-Config-Example.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/app-309be032396e783b13a47df58f389b7c8e11c2b2d42640560b874f677c25f6e5.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/print-512498c368be0d3fb1ba105dfa84289ae48380ec9fcbef948bd4e23b0b095bfb.css" media="print">
+
+  <link rel="stylesheet" type="text/css" href="../custom.css" media="all">
+  
+
+  <script>
+  var criticMarkup = '';
+	var baseUrl = '';
+  var showLocalTime = false;
+	var uploadDest = 'uploads';
+	var perPageUploads = '';
+	if (perPageUploads == 'true') {
+	  uploadDest = uploadDest + window.location.pathname.replace(/.*gollum\/[-\w]+\//, "/").replace(/\.[^/.]+$/, "").replace(baseUrl, "")
+	}
+	  var pageFullPath = 'howto/EdgeOS-Config-Example.md';
+    var pageFormat   = 'markdown';
+
+  </script>
+  <script src="../gollum/assets/app-f05401ee374f0c7f48fc2bc08e30b4f4db705861fd5895ed70998683b383bfb5.js" type="text/javascript"></script>
+  
+
+  <title>EdgeOS-Config-Example</title>
+</head>
+<body>
+<div class="container-lg clearfix">
+<div id="wiki-wrapper" class="page">
+<div id="head">
+	<nav class="TableObject
+            actions
+            border-bottom
+            border-md-0
+            p-2
+            pt-lg-4
+            px-lg-0
+            overflow-x-scroll">
+  <div class="TableObject-item hide-lg hide-xl">
+    <details class="details-reset details-overlay">
+      <summary class="btn btn-invisible" aria-haspopup="true">
+        <span aria-label="Open menu">☰</span>
+      </summary>
+    
+      <div class="SelectMenu mx-sm-2">
+        <div class="SelectMenu-modal">
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Current Page</h2>
+            <div>EdgeOS-Config-Example</div>
+          </div>
+    
+            <a
+              class="SelectMenu-item"
+              href="../gollum/history/howto/EdgeOS-Config-Example.html"
+              role="menuitem"
+            >
+              <span>History</span>
+            </a>
+    
+    
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Main Menu</h2>
+          </div>
+    
+          <div class="SelectMenu-list">
+            <a class="SelectMenu-item" role="menuitem" href="../index.html">
+              Home
+            </a>
+    
+              <a class="SelectMenu-item" role="menuitem" href="../gollum/overview.html">
+                Overview
+              </a>
+    
+              <a
+                class="SelectMenu-item"
+                href="../gollum/latest_changes.html"
+                role="menuitem"
+              >
+                Latest Changes
+              </a>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <a class="btn btn-sm" id="minibutton-home" href="../index.html">
+      Home
+    </a>
+  </div>
+
+  <div
+    class="TableObject-item TableObject-item--primary px-2"
+    
+  >
+    <form class="search-form" action="http://127.0.0.1:4567/gollum/search" method="get" id="search-form">
+    	<input type="text" class="form-control input-block" name="q" id="search-query" placeholder="Search" aria-label="Search site" autocomplete="off">
+    </form>  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/overview.html"
+          id="minibutton-overview"
+        >
+          Overview
+        </a>
+
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/latest_changes.html"
+          id="minibutton-latest-changes"
+        >
+          Latest Changes
+        </a>
+    </div>
+  </div>
+
+  <div class="TableObject-item px-2">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm hide-sm hide-md"
+          href="../gollum/history/howto/EdgeOS-Config-Example.md/index.html"
+          id="minibutton-history"
+        >
+          History
+        </a>
+
+    </div>
+  </div>
+
+</nav>
+
+</div>
+
+<div id="wiki-content" class="px-2 px-lg-0">
+  <h1 class="header-title text-center text-md-left pt-4">
+    EdgeOS-Config-Example
+  </h1>
+	<div class="breadcrumb"><nav aria-label="Breadcrumb"><ol>
+<li class="breadcrumb-item"><a href="../gollum/overview/howto/index.html">howto</a></li>
+</ol></nav></div>
+
+	<div class="has-header has-footer has-sidebar has-rightbar">
+	  <div id="wiki-body" class="gollum-markdown-content">
+	    <div id="wiki-header" class="gollum-markdown-content">
+	      <div id="header-content" class="markdown-body">
+	        <p><a href="../index.html" rel="nofollow"><img src="../dn42.png" alt="dn42" /></a></p>
+
+	      </div>
+	    </div>
+	    <div class="main-content clearfix container-lg">
+	      <div class="markdown-body  float-md-left col-md-9" >
+	        
+	        <h1><a class="anchor" id="edgerouter-lite-dn42-config-example" href="#edgerouter-lite-dn42-config-example"></a>EdgeRouter Lite DN42 config example</h1>
+
+<p>This is the config I (Felicitus) am running on an Ubiquiti EdgeRouter Lite (AS76197).</p>
+
+<h2><a class="anchor" id="features" href="#features"></a>Features</h2>
+
+<ul>
+<li>dn42 DNS</li>
+<li>"classic" OpenVPN P2P (including the common "comp-lzo" option)</li>
+<li>BGP</li>
+<li>Some traffic-shaping rules for my very slow 3mbit DSL uplink</li>
+<li>2 internal: One DN42 network (172.22.117.128/25 for me and my servers as well as a NAT 192.168.42.10/24 for my parents, so that they're save from dn42 - that network is NOT announced to dn42).</li>
+<li>Firewall to protect my NAS server and monitoring</li>
+</ul>
+
+<h2><a class="anchor" id="upcoming" href="#upcoming"></a>Upcoming</h2>
+
+<ul>
+<li>AICCU integration (SIXXS), probably not possible with the config, so <code>apt-get install aiccu</code> should do the trick</li>
+<li>dn42 IPv6 routing (probably)</li>
+</ul>
+
+<p>Ask me if you want to know if I have implemented those items already.</p>
+
+<h1><a class="anchor" id="configuration" href="#configuration"></a>Configuration</h1>
+
+<pre class="highlight"><code>firewall {
+    all-ping enable
+    broadcast-ping disable
+    conntrack-expect-table-size 4096
+    conntrack-hash-size 4096
+    conntrack-table-size 32768
+    conntrack-tcp-loose enable
+    ipv6-name ROUTER_V6 {
+        default-action drop
+        rule 1 {
+            action drop
+            destination {
+                port 22
+            }
+            protocol tcp
+        }
+    }
+    ipv6-name WAN_IN_V6 {
+        default-action drop
+        enable-default-log
+        rule 3 {
+            action drop
+            destination {
+                port 22
+            }
+            protocol tcp
+        }
+    }
+    ipv6-receive-redirects disable
+    ipv6-src-route disable
+    ip-src-route disable
+    log-martians enable
+    name DN42 {
+        default-action drop
+        rule 100 {
+            action drop
+            destination {
+                address 172.22.117.181
+            }
+            source {
+                address !172.22.117.128/25
+            }
+        }
+        rule 101 {
+            action drop
+            destination {
+                address 172.22.117.182
+            }
+            source {
+                address !172.22.117.128/25
+            }
+        }
+        rule 102 {
+            action drop
+            destination {
+                address 172.22.117.183
+            }
+            source {
+                address !172.22.117.128/25
+            }
+        }
+    }
+    name ROUTER_V4 {
+        default-action accept
+        rule 2 {
+            action accept
+            protocol icmp
+        }
+        rule 10 {
+            action drop
+            destination {
+                port 22
+            }
+            protocol tcp
+        }
+    }
+    name WAN_IN_V4 {
+        default-action drop
+        enable-default-log
+        rule 1 {
+            action accept
+            description "allow established connections"
+            protocol all
+            state {
+                established enable
+                related enable
+            }
+        }
+        rule 2 {
+            action drop
+            state {
+                invalid enable
+            }
+        }
+        rule 3 {
+            action drop
+            destination {
+                port 22
+            }
+            protocol tcp
+        }
+    }
+    receive-redirects disable
+    send-redirects enable
+    source-validation disable
+    syn-cookies enable
+}
+interfaces {
+    ethernet eth0 {
+        duplex auto
+        firewall {
+            in {
+                name WAN_IN_V4
+            }
+        }
+        pppoe 0 {
+            default-route auto
+            firewall {
+                local {
+                    ipv6-name ROUTER_V6
+                    name ROUTER_V4
+                }
+            }
+            mtu 1492
+            name-server auto
+            password 12345678
+            traffic-policy {
+            }
+            user-id some-t-online-crap@t-online.de
+        }
+        speed auto
+    }
+    ethernet eth1 {
+        address 172.22.117.254/25
+        duplex auto
+        speed auto
+        traffic-policy {
+        }
+    }
+    ethernet eth2 {
+        address 192.168.42.1/24
+        duplex auto
+        speed auto
+    }
+    loopback lo {
+    }
+    openvpn vtun0 {
+        local-address 172.22.117.254 {
+            subnet-mask 255.255.255.128
+        }
+        local-port 33121
+        mode site-to-site
+        openvpn-option --comp-lzo
+        protocol udp
+        remote-address 172.22.117.1
+        remote-host 5.9.33.163
+        remote-port 33121
+        shared-secret-key-file /config/auth/felihome.key
+    }
+}
+policy {
+    prefix-list vpn-in {
+        rule 10 {
+            action permit
+            ge 22
+            le 28
+            prefix 172.22.0.0/15
+        }
+    }
+}
+protocols {
+    bgp 76197 {
+        neighbor 172.22.117.1 {
+            description feli-server
+            peer-group dn42
+            remote-as 64717
+        }
+        network 172.22.117.128/25 {
+        }
+        peer-group dn42 {
+            soft-reconfiguration {
+                inbound
+            }
+        }
+    }
+}
+service {
+    dhcp-server {
+        disabled false
+        dynamic-dns-update {
+            enable true
+        }
+        shared-network-name int {
+            authoritative disable
+            subnet 172.22.117.128/25 {
+                default-router 172.22.117.254
+                dns-server 172.22.117.254
+                domain-name feli-home.felicitus.org
+                lease 86400
+                start 172.22.117.129 {
+                    stop 172.22.117.150
+                }
+                static-mapping monitoring {
+                    ip-address 172.22.117.183
+                    mac-address 52:54:00:20:df:46
+                }
+                static-mapping nas {
+                    ip-address 172.22.117.181
+                    mac-address e8:39:35:ee:22:7b
+                }
+            }
+        }
+        shared-network-name nat {
+            authoritative disable
+            subnet 192.168.42.0/24 {
+                default-router 192.168.42.1
+                dns-server 8.8.8.8
+                dns-server 8.8.4.4
+                lease 86400
+                start 192.168.42.10 {
+                    stop 192.168.42.100
+                }
+            }
+        }
+    }
+    dns {
+        forwarding {
+            cache-size 150
+            listen-on eth1
+            listen-on eth2
+            name-server 8.8.8.8
+            name-server 8.8.4.4
+            options server=/dn42/172.23.0.53
+            options server=/22.172.in-addr.arpa/172.23.0.53
+            options server=/23.172.in-addr.arpa/172.23.0.53
+            options rebind-domain-ok=/dn42/
+        }
+    }
+    nat {
+        rule 6000 {
+            outbound-interface pppoe0
+            type masquerade
+        }
+        rule 7000 {
+            outbound-interface eth2
+            type masquerade
+        }
+    }
+    ssh {
+        port 22
+        protocol-version v2
+    }
+    upnp {
+        listen-on eth1 {
+            outbound-interface pppoe0
+        }
+        listen-on eth2 {
+            outbound-interface pppoe0
+        }
+    }
+}
+system {
+    host-name ubnt
+    login {
+        user felicitus {
+            authentication {
+                encrypted-password errnope
+                plaintext-password ""
+                public-keys felicitus@felicitus.org {
+                    key AAAAB3NzaC1yc2EAAAADAQABAAABAQDPTSLjSY/Be1XJ/klAwLiM1pKSvmbdcOgtgDB6nPcHkgX6JZu7g/Kejfuk4qIKL8GYYUQt7DlGY6n2u5rChWE/6KZJzXcUwS3pXk4LZ5KydWp7ihfvyRtUOBgKkRa1zQv+6KCH9WyR++ArwVTP8KSkrmDe6k7NWAjZqOuIJHG/AbEyTBapTJYjObZ0AM7wlwcB+oRM1BfZCP0Y+PIP2eGJS7Pyb32pITNKk3JuFXgAvbj5OeRrwtpZ9S+/7wIpaUVODPzrVmbC7vOXu/2KJ9aY2BmxUsxRbrvWMmWNiuE0YPt/7lUroK4pH3md3lWRcGUS/uYvhug7yG1yB81nyI15
+                    type ssh-rsa
+                }
+            }
+            level admin
+        }
+    }
+    name-server 172.22.117.254
+    ntp {
+        server 0.ubnt.pool.ntp.org {
+        }
+        server 1.ubnt.pool.ntp.org {
+        }
+        server 2.ubnt.pool.ntp.org {
+        }
+        server 3.ubnt.pool.ntp.org {
+        }
+    }
+    syslog {
+        global {
+            facility all {
+                level notice
+            }
+            facility protocols {
+                level debug
+            }
+        }
+    }
+    time-zone UTC
+}
+traffic-policy {
+    shaper client-up-s {
+        bandwidth 30kbit
+        class 20 {
+            bandwidth 100%
+            burst 6k
+            match TCPACK {
+                ip {
+                    protocol tcp
+                }
+                mark 225
+            }
+            priority 5
+            queue-limit 65
+            queue-type fair-queue
+        }
+        class 30 {
+            bandwidth 5%
+            burst 15k
+            ceiling 20%
+            match ssh {
+                ip {
+                    destination {
+                        port 22
+                    }
+                    dscp lowdelay
+                    protocol tcp
+                }
+            }
+            match ssh-ipv6 {
+                ipv6 {
+                    destination {
+                        port 22
+                    }
+                    protocol tcp
+                }
+            }
+            priority 6
+            queue-limit 10
+            queue-type fair-queue
+        }
+        default {
+            bandwidth 95%
+            burst 15k
+            ceiling 100%
+            priority 2
+            queue-limit 13
+            queue-type fair-queue
+        }
+    }
+}
+
+
+/* Warning: Do not remove the following line. */
+/* === vyatta-config-version: "config-management@1:dhcp-relay@1:dhcp-server@4:firewall@4:ipsec@3:nat@3:qos@1:quagga@2:system@4:ubnt-pptp@1:ubnt-util@1:vrrp@1:webgui@1:webproxy@1:zone-policy@1" === */
+/* Release version: v1.3.0.4605130.131011.1754 */</code></pre>
+
+	      </div>
+          <div id="wiki-sidebar" class="Box Box--condensed float-md-left col-md-3">
+	        <div id="sidebar-content" class="gollum-markdown-content markdown-body px-4">
+	          <ul>
+<li>
+<a href="../Home.html" rel="nofollow">Home</a>
+
+<ul>
+<li><a href="Getting-Started.html" rel="nofollow">Getting Started</a></li>
+<li><a href="Registry-Authentication.html" rel="nofollow">Registry Authentication</a></li>
+<li><a href="Address-Space.html" rel="nofollow">Address Space</a></li>
+<li><a href="Bird-communities.html" rel="nofollow">BGP communities</a></li>
+<li><a href="../FAQ.html" rel="nofollow">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<p>How-To</p>
+
+<ul>
+<li><a href="wireguard.html" rel="nofollow">Wireguard</a></li>
+<li><a href="openvpn.html" rel="nofollow">Openvpn</a></li>
+<li><a href="IPsec-with-PublicKeys.html" rel="nofollow">IPsec With Public Keys</a></li>
+<li><a href="tinc.html" rel="nofollow">Tinc</a></li>
+<li><a href="GRE-on-FreeBSD.html" rel="nofollow">GRE on FreeBSD</a></li>
+<li><a href="GRE-on-OpenBSD.html" rel="nofollow">GRE on OpenBSD</a></li>
+<li><a href="IPv6-Multicast.html" rel="nofollow">IPv6 Multicast (PIM-SM)</a></li>
+<li>
+<a href="Bird.html" rel="nofollow">Bird</a> / <a href="Bird2.html" rel="nofollow">Bird2</a>
+</li>
+<li><a href="Quagga.html" rel="nofollow">Quagga</a></li>
+<li><a href="OpenBGPD.html" rel="nofollow">OpenBGPD</a></li>
+<li><a href="mikrotik.html" rel="nofollow">Mikrotik RouterOS</a></li>
+<li><a href="EdgeOS-Config.html" rel="nofollow">EdgeRouter</a></li>
+<li><a href="Static-routes-on-Windows.html" rel="nofollow">Static routes on Windows</a></li>
+<li><a href="networksettings.html" rel="nofollow">Universal Network Requirements</a></li>
+<li><a href="vyos.html" rel="nofollow">VyOS</a></li>
+<li><a href="nixos.html" rel="nofollow">NixOS</a></li>
+</ul>
+</li>
+<li>
+<p>Services</p>
+
+<ul>
+<li><a href="../services/IRC.html" rel="nofollow">IRC</a></li>
+<li><a href="../services/Whois.html" rel="nofollow">Whois registry</a></li>
+<li><a href="../services/DNS.html" rel="nofollow">DNS</a></li>
+<li><a href="../services/Clearnet-Domains.html" rel="nofollow">Public DNS</a></li>
+<li><a href="../services/Looking-Glasses.html" rel="nofollow">Looking Glasses</a></li>
+<li><a href="../services/Automatic-Peering.html" rel="nofollow">Automatic Peering</a></li>
+<li><a href="../services/Repository-Mirrors.html" rel="nofollow">Repository Mirrors</a></li>
+<li><a href="../services/Distributed-Wiki.html" rel="nofollow">Distributed Wiki</a></li>
+<li><a href="../services/Certificate-Authority.html" rel="nofollow">Certificate Authority</a></li>
+<li><a href="../services/Route-Collector.html" rel="nofollow">Route Collector</a></li>
+</ul>
+</li>
+<li>
+<p>Internal</p>
+
+<ul>
+<li><a href="../internal/Internal-Services.html" rel="nofollow">Internal services</a></li>
+<li><a href="../internal/Interconnections.html" rel="nofollow">Interconnections</a></li>
+<li><a href="../internal/APIs.html" rel="nofollow">APIs</a></li>
+<li>
+<a href="../internal/ShowAndTell.html" rel="nofollow">Show and Tell</a><br />
+</li>
+<li><a href="../internal/Historical-Services.html" rel="nofollow">Historical services</a></li>
+</ul>
+</li>
+<li>
+<p>External Tools</p>
+
+<ul>
+<li><a href="https://paste.dn42.us/" rel="nofollow">Paste Board</a></li>
+<li><a href="https://git.dn42.dev/" rel="nofollow">Git Repositories</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="wiki-footer" class="gollum-markdown-content my-2">
+	    <div id="footer-content" class="Box Box-condensed markdown-body px-4">
+	      <p>Hosted by: <a href="mailto:xuu@sour.is" rel="nofollow">xuu</a>, <a href="mailto:nurtic-vibe@grmml.net" rel="nofollow">nurtic-vibe</a>, <a href="mailto:tom@xcv.vc" rel="nofollow">toBee</a>, <a href="mailto:dn42@burble.com" rel="nofollow">burble</a> | Accessible via: <a href="https://wiki.dn42/" rel="nofollow">dn42</a>, <a href="https://dn42.eu/" rel="nofollow">dn42.eu</a>, <a href="https://dn42.dev/" rel="nofollow">dn42.dev</a></p>
+
+	    </div>
+	  </div>
+
+
+	</div>
+
+
+	<div id="footer" class="pt-4">
+		  <p id="last-edit"><div class="dotted-spinner hidden"></div> <a id="page-info-toggle" data-pagepath="howto/EdgeOS-Config-Example.md">When was this page last modified?</a></p>
+	</div>
+
+
+</div>
+
+<form name="rename" method="POST" action="http://127.0.0.1:4567/gollum/rename/howto/EdgeOS-Config-Example.md">
+  <input type="hidden" name="rename"/>
+  <input type="hidden" name="message"/>
+</form>
+
+</div>
+</div>
+</body>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/EdgeOS-Config-Example.md by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:48 GMT -->
+</html>

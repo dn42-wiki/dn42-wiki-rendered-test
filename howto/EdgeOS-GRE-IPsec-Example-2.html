@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/EdgeOS-GRE-IPsec-Example by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/app-309be032396e783b13a47df58f389b7c8e11c2b2d42640560b874f677c25f6e5.css" media="all">
+  <link rel="stylesheet" type="text/css" href="../gollum/assets/print-512498c368be0d3fb1ba105dfa84289ae48380ec9fcbef948bd4e23b0b095bfb.css" media="print">
+
+  <link rel="stylesheet" type="text/css" href="../custom.css" media="all">
+  
+
+  <script>
+  var criticMarkup = '';
+	var baseUrl = '';
+  var showLocalTime = false;
+	var uploadDest = 'uploads';
+	var perPageUploads = '';
+	if (perPageUploads == 'true') {
+	  uploadDest = uploadDest + window.location.pathname.replace(/.*gollum\/[-\w]+\//, "/").replace(/\.[^/.]+$/, "").replace(baseUrl, "")
+	}
+	  var pageFullPath = 'howto/EdgeOS-GRE-IPsec-Example.md';
+    var pageFormat   = 'markdown';
+
+  </script>
+  <script src="../gollum/assets/app-f05401ee374f0c7f48fc2bc08e30b4f4db705861fd5895ed70998683b383bfb5.js" type="text/javascript"></script>
+  
+
+  <title>EdgeOS-GRE-IPsec-Example</title>
+</head>
+<body>
+<div class="container-lg clearfix">
+<div id="wiki-wrapper" class="page">
+<div id="head">
+	<nav class="TableObject
+            actions
+            border-bottom
+            border-md-0
+            p-2
+            pt-lg-4
+            px-lg-0
+            overflow-x-scroll">
+  <div class="TableObject-item hide-lg hide-xl">
+    <details class="details-reset details-overlay">
+      <summary class="btn btn-invisible" aria-haspopup="true">
+        <span aria-label="Open menu">☰</span>
+      </summary>
+    
+      <div class="SelectMenu mx-sm-2">
+        <div class="SelectMenu-modal">
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Current Page</h2>
+            <div>EdgeOS-GRE-IPsec-Example</div>
+          </div>
+    
+            <a
+              class="SelectMenu-item"
+              href="../gollum/history/howto/EdgeOS-GRE-IPsec-Example.html"
+              role="menuitem"
+            >
+              <span>History</span>
+            </a>
+    
+    
+          <div class="SelectMenu-divider py-3">
+            <h2 class="h6">Main Menu</h2>
+          </div>
+    
+          <div class="SelectMenu-list">
+            <a class="SelectMenu-item" role="menuitem" href="../index.html">
+              Home
+            </a>
+    
+              <a class="SelectMenu-item" role="menuitem" href="../gollum/overview.html">
+                Overview
+              </a>
+    
+              <a
+                class="SelectMenu-item"
+                href="../gollum/latest_changes.html"
+                role="menuitem"
+              >
+                Latest Changes
+              </a>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <a class="btn btn-sm" id="minibutton-home" href="../index.html">
+      Home
+    </a>
+  </div>
+
+  <div
+    class="TableObject-item TableObject-item--primary px-2"
+    
+  >
+    <form class="search-form" action="http://127.0.0.1:4567/gollum/search" method="get" id="search-form">
+    	<input type="text" class="form-control input-block" name="q" id="search-query" placeholder="Search" aria-label="Search site" autocomplete="off">
+    </form>  </div>
+
+  <div class="TableObject-item hide-sm hide-md">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/overview.html"
+          id="minibutton-overview"
+        >
+          Overview
+        </a>
+
+        <a
+          class="btn BtnGroup-item btn-sm"
+          href="../gollum/latest_changes.html"
+          id="minibutton-latest-changes"
+        >
+          Latest Changes
+        </a>
+    </div>
+  </div>
+
+  <div class="TableObject-item px-2">
+    <div class="BtnGroup d-flex">
+        <a
+          class="btn BtnGroup-item btn-sm hide-sm hide-md"
+          href="../gollum/history/howto/EdgeOS-GRE-IPsec-Example.md/index.html"
+          id="minibutton-history"
+        >
+          History
+        </a>
+
+    </div>
+  </div>
+
+</nav>
+
+</div>
+
+<div id="wiki-content" class="px-2 px-lg-0">
+  <h1 class="header-title text-center text-md-left pt-4">
+    EdgeOS-GRE-IPsec-Example
+  </h1>
+	<div class="breadcrumb"><nav aria-label="Breadcrumb"><ol>
+<li class="breadcrumb-item"><a href="../gollum/overview/howto/index.html">howto</a></li>
+</ol></nav></div>
+
+	<div class="has-header has-footer has-sidebar has-rightbar">
+	  <div id="wiki-body" class="gollum-markdown-content">
+	    <div id="wiki-header" class="gollum-markdown-content">
+	      <div id="header-content" class="markdown-body">
+	        <p><a href="../index.html" rel="nofollow"><img src="../dn42.png" alt="dn42" /></a></p>
+
+	      </div>
+	    </div>
+	    <div class="main-content clearfix container-lg">
+	      <div class="markdown-body  float-md-left col-md-9" >
+	        
+	        <h1><a class="anchor" id="edgeos-gre-ipsec-config-example" href="#edgeos-gre-ipsec-config-example"></a>EdgeOS GRE/IPsec config example</h1>
+
+<p>This is an example configuration derived from the config used on a peering router in AS64746. It was created using EdgeOS version 1.5.0alpha1 on an EdgeRouter Lite.</p>
+
+<h2><a class="anchor" id="features" href="#features"></a>Features</h2>
+
+<ul>
+<li>Zone-based firewall</li>
+<li>BGP prefix filtering and route summarization</li>
+<li>GRE/IPsec tunnel in transport mode with "plainrsa" public key authentication</li>
+<li>TCP MSS clamping to avoid fragmentation</li>
+</ul>
+
+<h2><a class="anchor" id="setup" href="#setup"></a>Setup</h2>
+
+<p>This configuration assumes that both peers have static public IPs.</p>
+
+<p>You'll need to generate a public/private keypair for your router if you intend to use "plainrsa" authentication for your IPsec connections. The local public key listed in the output is what you'll send to your peer.</p>
+
+<pre><code>ryan@edge1:~$ generate vpn rsa-key bits 4096
+ryan@edge1:~$ show vpn ike rsa-keys
+
+Local public key (/config/ipsec.d/rsa-keys/localhost.key):
+
+0sAQPNdF370ZEbN+kZUJQ10qnBlZujrg39ujfk20ILTjELksOIdJw/4jiU1MfpqFDKuB/XxERwJQp2POsFyV/n76jAgxIYBfFYfuaBcIH1rdNQtDhCnkmWzlueRXGEsz0Af79n8TKyQ9otzNhJ2cPE1CWCJbKqbIUN3piviLgGlItWNeya+Tl3Oj3ZfEVwr1QOvUAw32+m4L8T9jf1vqSlOTHpRpxxPWBrLEzstk0FOcZISji2JBpDOCU8Kpyyf74JM+LxsOIHwmS15b6iFZR3U9KZLqbbd0dSy/cM8P4XjrwM5UMyRDjrLqvuA/K/33BgtnxdQR3e9DJoYH3Qr8eRgSkR+jHyq06LvgHkHbMvrEjUnc3n8bg+YfR4oyJpIWsKjfIXmN1Q51KzxAPIAww+YSYUYtamSsQsspVAtMIQqR4e0r1In1qyoSn8VCPlksNMWpqYHbSjDo5HJYoSwxf2epzMtCvhenn0OuiH0xlgzziA+wBi6txksTMvJYcPJYnBVR2NIBjkWftOfmkY+rKMozViGjyd6kB7C8lqd8W7Ha5Ds2WxIY22DM3HcYH/zTp9z2xbuMOsbIgib/Y12Kh0wHyCz0lzFvs+d6CZwinyIXNKB/Vo4iiwT5luL5mGqf3pZx4zB+30GYSs/6MaELRF9BxD7tfqYCkOLXUtxyZ4Pdl2sw==
+</code></pre>
+
+<p>If your peer sends you a key in PEM format (starts with <code>-----BEGIN PUBLIC KEY-----</code>), you'll need to convert it to the format used by EdgeOS (begins with <code>0s</code>) in order to insert it into the configuration. See <a href="http://community.ubnt.com/t5/EdgeMAX/ERL-lt-gt-Mikrotik-IPsec-Connections/m-p/534682#M13015">this forum post</a> for a script to convert between the two key formats.</p>
+
+<h2><a class="anchor" id="configuration" href="#configuration"></a>Configuration</h2>
+
+<pre><code>firewall {
+    all-ping enable
+    broadcast-ping disable
+    ipv6-receive-redirects disable
+    ipv6-src-route disable
+    ip-src-route disable
+    log-martians enable
+    name DN42-to-Local {
+        default-action reject
+        rule 10 {
+            action accept
+            description Established/Related
+            state {
+                established enable
+                related enable
+            }
+        }
+        rule 20 {
+            action accept
+            description ICMP
+            protocol icmp
+        }
+        rule 30 {
+            action accept
+            description BGP
+            destination {
+                port bgp
+            }
+            protocol tcp
+            state {
+                new enable
+            }
+            tcp {
+                flags SYN,!ACK,!FIN,!RST
+            }
+        }
+    }
+    name DN42-to-LAN {
+        default-action reject
+        rule 10 {
+            action accept
+            description Established/Related
+            state {
+                established enable
+                related enable
+            }
+        }
+        rule 20 {
+            action accept
+            description ICMP
+            protocol icmp
+        }
+    }
+    name WAN-to-Local {
+        default-action drop
+        rule 10 {
+            action accept
+            description Established/Related
+            state {
+                established enable
+                related enable
+            }
+        }
+        rule 20 {
+            action accept
+            description ICMP
+            protocol icmp
+        }
+        rule 30 {
+            action accept
+            description "SSH Management"
+            destination {
+                port 22
+            }
+            protocol tcp
+            state {
+                new enable
+            }
+            tcp {
+                flags SYN,!ACK,!FIN,!RST
+            }
+        }
+        rule 40 {
+            action accept
+            description IKE
+            destination {
+                port 500,4500
+            }
+            protocol udp
+        }
+        rule 50 {
+            action accept
+            description IPSEC/ESP
+            protocol esp
+        }
+        rule 60 {
+            action accept
+            description "GRE over IPsec"
+            ipsec {
+                match-ipsec
+            }
+            protocol gre
+        }
+    }
+    name established-only {
+        default-action drop
+        rule 10 {
+            action accept
+            description Established/Related
+            state {
+                established enable
+                related enable
+            }
+        }
+    }
+    name allow-all-v4 {
+        default-action accept
+    }
+    options {
+        mss-clamp {
+            interface-type tun
+            mss 1300
+        }
+    }
+    receive-redirects disable
+    send-redirects enable
+    source-validation disable
+    syn-cookies enable
+}
+interfaces {
+    ethernet eth0 {
+        address 192.0.2.2/30
+        description WAN
+        duplex auto
+        speed auto
+    }
+    ethernet eth1 {
+        address 172.23.248.33/27
+        description LAN
+        duplex auto
+        speed auto
+    }
+    ethernet eth2 {
+        disable
+        duplex auto
+        speed auto
+    }
+    loopback lo {
+        address 172.23.248.2/32
+    }
+    tunnel tun0 {
+        address 172.23.248.10/31
+        description "CREST-DN42 AS64828"
+        encapsulation gre
+        local-ip 192.0.2.2
+        mtu 1400
+        multicast disable
+        remote-ip 192.0.2.243
+        ttl 255
+    }
+}
+policy {
+    prefix-list AS64746-IPv4 {
+        rule 1 {
+            action permit
+            le 32
+            prefix 172.23.248.0/24
+        }
+    }
+    prefix-list DN42-IPv4 {
+        rule 1 {
+            action permit
+            description "DN42 native"
+            ge 23
+            le 28
+            prefix 172.22.0.0/15
+        }
+        rule 2 {
+            action permit
+            description "DN42 anycast"
+            ge 32
+            prefix 172.22.0.0/24
+        }
+        rule 3 {
+            action permit
+            description Freifunk
+            ge 16
+            prefix 10.0.0.0/8
+        }
+        rule 4 {
+            action permit
+            description ChaosVPN
+            ge 23
+            prefix 172.31.0.0/16
+        }
+    }
+    route-map AS64746 {
+        rule 1 {
+            action permit
+            match {
+                ip {
+                    address {
+                        prefix-list AS64746-IPv4
+                    }
+                }
+            }
+        }
+    }
+    route-map DN42 {
+        rule 1 {
+            action permit
+            match {
+                ip {
+                    address {
+                        prefix-list DN42-IPv4
+                    }
+                }
+            }
+        }
+    }
+}
+protocols {
+    bgp 64746 {
+        aggregate-address 172.23.248.0/24 {
+            summary-only
+        }
+        neighbor 172.23.248.11 {
+            description CREST-DN42
+            peer-group DN42
+            remote-as 64828
+            update-source 172.23.248.10
+        }
+        network 172.23.248.0/24 {
+        }
+        parameters {
+            router-id 172.23.248.2
+        }
+        peer-group DN42 {
+            route-map {
+                export DN42
+                import DN42
+            }
+            soft-reconfiguration {
+                inbound
+            }
+        }
+        redistribute {
+            connected {
+                route-map AS64746
+            }
+        }
+    }
+    static {
+        route 0.0.0.0/0 {
+            next-hop 192.0.2.1 {
+            }
+        }
+        route 172.23.248.0/24 {
+            blackhole {
+                distance 255
+            }
+        }
+    }
+}
+service {
+    nat {
+        rule 6000 {
+            outbound-interface eth0
+            type masquerade
+        }
+    }
+    ssh {
+        disable-password-authentication
+        port 22
+        protocol-version v2
+    }
+    ubnt-discover {
+        disable
+    }
+}
+system {
+    config-management {
+        commit-revisions 10
+    }
+    domain-name ryan.dn42
+    host-name edge1
+    login {
+        banner {
+            pre-login ""
+        }
+        user ryan {
+            authentication {
+                encrypted-password :)
+                public-keys ryan {
+                    key AAAAB3NzaC1yc2EAAAADAQABAAACAQCymzCbuc777hZ8acvK+68tB7WlZl9V8rQjeQCHny2f9Fy2uSnDHXymUzQJSBY8dr4QM07owCFyYciYqhJRBeBRiaP1dj6avzZzlrOC2xuXSWw4aCYVkEaBPWkntCvBjmPhtvA+x5w8qm0X+B41DG1D44qzrQSmL5geheQCHWSf48Za6RUvPxPuQ+xfBMlIaWscRn95NST2102sYwfl3GDJEqV8FqZ5gQeuG3LDRBQmVEZOSMFIN0pOrp6+UYDe6LSw8eD3uBNrkfbbwwEqjHKFNuYaIw/XNdY0nqhHec0KjsuPLHTQMc44h8CPL5ytAtjF1WnPAE4e3aDQFnB05V/3GThJI010bNkLw5zbGkq0QUa7SmFfAsyOg50grByqZWY/J997HXjWdsgK+7d3K4VQXlI1Uak6G2i0Vb5KX0Xv6dmFmsqwuomeGozBJOl3YebvHI/39Y1VcZls2Zkjg4dBWJQGhsZv8wAX8bf7owtLPE+PcWvX5dRmk44r93mk1M1PTz7XAJGXfeii/OV+QRZZkbzhi3h7VItF5Yv5nptMQUx+irUrIX3gaTHOu8cMTxtP52kIOGOEN/LmYbmrdc++QJNGGadopuZBDpCiR2xQhwQL5yKaXH6Rdenn9d0mdNTzdqw5QOUfjY+SqTMDqLk+ETY+YZ6fvJYDIm4yfgi//Q==
+                    type ssh-rsa
+                }
+            }
+            level admin
+        }
+    }
+    name-server 4.2.2.2
+    name-server 8.8.8.8
+    ntp {
+        server 0.ubnt.pool.ntp.org {
+        }
+        server 1.ubnt.pool.ntp.org {
+        }
+        server 2.ubnt.pool.ntp.org {
+        }
+        server 3.ubnt.pool.ntp.org {
+        }
+    }
+    offload {
+        ipsec enable
+        ipv4 {
+            forwarding enable
+        }
+        ipv6 {
+            forwarding enable
+        }
+    }
+    options {
+        reboot-on-panic true
+    }
+    package {
+        repository squeeze {
+            components "main contrib non-free"
+            distribution squeeze
+            password ""
+            url http://http.us.debian.org/debian
+            username ""
+        }
+        repository squeeze-security {
+            components main
+            distribution squeeze/updates
+            password ""
+            url http://security.debian.org
+            username ""
+        }
+        repository squeeze-updates {
+            components "main contrib non-free"
+            distribution squeeze-updates
+            password ""
+            url http://http.us.debian.org/debian
+            username ""
+        }
+    }
+    syslog {
+        global {
+            facility all {
+                level notice
+            }
+            facility protocols {
+                level debug
+            }
+        }
+    }
+}
+vpn {
+    ipsec {
+        auto-firewall-nat-exclude disable
+        esp-group ESP-AES128-SHA1-DH5-TRANSPORT {
+            compression disable
+            lifetime 3600
+            mode transport
+            pfs dh-group5
+            proposal 1 {
+                encryption aes128
+                hash sha1
+            }
+        }
+        ike-group IKE-AES128-SHA1-DH5 {
+            lifetime 28800
+            proposal 1 {
+                dh-group 5
+                encryption aes128
+                hash sha1
+            }
+        }
+        ipsec-interfaces {
+            interface eth0
+        }
+        site-to-site {
+            peer 192.0.2.243 {
+                authentication {
+                    mode rsa
+                    rsa-key-name crest-dn42
+                }
+                connection-type initiate
+                default-esp-group ESP-AES128-SHA1-DH5-TRANSPORT
+                ike-group IKE-AES128-SHA1-DH5
+                local-ip 192.0.2.2
+                tunnel 0 {
+                    allow-nat-networks disable
+                    allow-public-networks disable
+                    esp-group ESP-AES128-SHA1-DH5-TRANSPORT
+                    protocol gre
+                }
+            }
+        }
+    }
+    rsa-keys {
+        rsa-key-name crest-dn42 {
+            rsa-key 0sAwEAAbsbRoUcgdm4A4Nm+PLxWcW+zFis7pkaJ0MkGVzM7VC8nmngkM+W2zqZyQ4NUTBKKfGOUc4Ogi6gyhlzUnHdag9tDERIX+BwlDO6G4arod9z9KqmJuX4AOYVjH5QlAPz7NDMAezVekGoVLPGdOAMPD6NN54ihLRH6V3if8AGoJRpiajhcgQipjeQnhH4QhsYK4XSjayGT1onQwA8nhy5kt4ofyqSale4Fl4166S9tCn4RKwtlJDjR6VIrg6op6Ip8+ke2vjEHPJHj6qVsxfRgOk2d8pY8oPVt8ayc5F1z+lqJ7R0fADfN+AQSaBqOMmg5dHDFYWwgYkU5egdVKS7Oko6uNuUWsZ0VEnRoPZ4syJEUbiF5wGfaVBaaVLZYUlRLQCffB4JKzp+JesVToCX6JYRfb4JYQWFCDeQfrqRZHM4r13h8MOWPn9cqXcP47RKJjzNp6595biUotmCbMHyy/uveMWxK6vDzPQRkywqMMJE2qOyACmbMnSce9KlYhvma82Vd+z/9/U9NEy0s5MaYNDn+q+KYT5My3NSv52F6sLVGrKxTk79tzUejZcoukJv+gf51Epam4kVHzPIal/khsfjZn6YCU2j5+qcdRmzF+SG5c2WicvEU2Gc4ratfYNEPxU5oArzHIhIz6x2nAF+szcx/x8GEyXPNHnxEboJB7ox
+        }
+    }
+}
+zone-policy {
+    zone DN42 {
+        default-action reject
+        description DN42
+        from Local {
+            firewall {
+                name allow-all-v4
+            }
+        }
+        from LAN {
+            firewall {
+                name allow-all-v4
+            }
+        }
+        interface tun0
+    }
+    zone LAN {
+        default-action reject
+        from DN42 {
+            firewall {
+                name DN42-to-LAN
+            }
+        }
+        from Local {
+            firewall {
+                name allow-all-v4
+            }
+        }
+        from WAN {
+            firewall {
+                name established-only
+            }
+        }
+        interface eth1
+    }
+    zone Local {
+        default-action reject
+        from DN42 {
+            firewall {
+                name DN42-to-Local
+            }
+        }
+        from LAN {
+            firewall {
+                name allow-all-v4
+            }
+        }
+        from WAN {
+            firewall {
+                name WAN-to-Local
+            }
+        }
+        local-zone
+    }
+    zone WAN {
+        default-action reject
+        from LAN {
+            firewall {
+                name allow-all-v4
+            }
+        }
+        from Local {
+            firewall {
+                name allow-all-v4
+            }
+        }
+        interface eth0
+    }
+}
+</code></pre>
+
+	      </div>
+          <div id="wiki-sidebar" class="Box Box--condensed float-md-left col-md-3">
+	        <div id="sidebar-content" class="gollum-markdown-content markdown-body px-4">
+	          <ul>
+<li>
+<a href="../Home.html" rel="nofollow">Home</a>
+
+<ul>
+<li><a href="Getting-Started.html" rel="nofollow">Getting Started</a></li>
+<li><a href="Registry-Authentication.html" rel="nofollow">Registry Authentication</a></li>
+<li><a href="Address-Space.html" rel="nofollow">Address Space</a></li>
+<li><a href="Bird-communities.html" rel="nofollow">BGP communities</a></li>
+<li><a href="../FAQ.html" rel="nofollow">FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li>
+<p>How-To</p>
+
+<ul>
+<li><a href="wireguard.html" rel="nofollow">Wireguard</a></li>
+<li><a href="openvpn.html" rel="nofollow">Openvpn</a></li>
+<li><a href="IPsec-with-PublicKeys.html" rel="nofollow">IPsec With Public Keys</a></li>
+<li><a href="tinc.html" rel="nofollow">Tinc</a></li>
+<li><a href="GRE-on-FreeBSD.html" rel="nofollow">GRE on FreeBSD</a></li>
+<li><a href="GRE-on-OpenBSD.html" rel="nofollow">GRE on OpenBSD</a></li>
+<li><a href="IPv6-Multicast.html" rel="nofollow">IPv6 Multicast (PIM-SM)</a></li>
+<li>
+<a href="Bird.html" rel="nofollow">Bird</a> / <a href="Bird2.html" rel="nofollow">Bird2</a>
+</li>
+<li><a href="Quagga.html" rel="nofollow">Quagga</a></li>
+<li><a href="OpenBGPD.html" rel="nofollow">OpenBGPD</a></li>
+<li><a href="mikrotik.html" rel="nofollow">Mikrotik RouterOS</a></li>
+<li><a href="EdgeOS-Config.html" rel="nofollow">EdgeRouter</a></li>
+<li><a href="Static-routes-on-Windows.html" rel="nofollow">Static routes on Windows</a></li>
+<li><a href="networksettings.html" rel="nofollow">Universal Network Requirements</a></li>
+<li><a href="vyos.html" rel="nofollow">VyOS</a></li>
+<li><a href="nixos.html" rel="nofollow">NixOS</a></li>
+</ul>
+</li>
+<li>
+<p>Services</p>
+
+<ul>
+<li><a href="../services/IRC.html" rel="nofollow">IRC</a></li>
+<li><a href="../services/Whois.html" rel="nofollow">Whois registry</a></li>
+<li><a href="../services/DNS.html" rel="nofollow">DNS</a></li>
+<li><a href="../services/Clearnet-Domains.html" rel="nofollow">Public DNS</a></li>
+<li><a href="../services/Looking-Glasses.html" rel="nofollow">Looking Glasses</a></li>
+<li><a href="../services/Automatic-Peering.html" rel="nofollow">Automatic Peering</a></li>
+<li><a href="../services/Repository-Mirrors.html" rel="nofollow">Repository Mirrors</a></li>
+<li><a href="../services/Distributed-Wiki.html" rel="nofollow">Distributed Wiki</a></li>
+<li><a href="../services/Certificate-Authority.html" rel="nofollow">Certificate Authority</a></li>
+<li><a href="../services/Route-Collector.html" rel="nofollow">Route Collector</a></li>
+</ul>
+</li>
+<li>
+<p>Internal</p>
+
+<ul>
+<li><a href="../internal/Internal-Services.html" rel="nofollow">Internal services</a></li>
+<li><a href="../internal/Interconnections.html" rel="nofollow">Interconnections</a></li>
+<li><a href="../internal/APIs.html" rel="nofollow">APIs</a></li>
+<li>
+<a href="../internal/ShowAndTell.html" rel="nofollow">Show and Tell</a><br />
+</li>
+<li><a href="../internal/Historical-Services.html" rel="nofollow">Historical services</a></li>
+</ul>
+</li>
+<li>
+<p>External Tools</p>
+
+<ul>
+<li><a href="https://paste.dn42.us/" rel="nofollow">Paste Board</a></li>
+<li><a href="https://git.dn42.dev/" rel="nofollow">Git Repositories</a></li>
+</ul>
+</li>
+</ul>
+
+<hr />
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="wiki-footer" class="gollum-markdown-content my-2">
+	    <div id="footer-content" class="Box Box-condensed markdown-body px-4">
+	      <p>Hosted by: <a href="mailto:xuu@sour.is" rel="nofollow">xuu</a>, <a href="mailto:nurtic-vibe@grmml.net" rel="nofollow">nurtic-vibe</a>, <a href="mailto:tom@xcv.vc" rel="nofollow">toBee</a>, <a href="mailto:dn42@burble.com" rel="nofollow">burble</a> | Accessible via: <a href="https://wiki.dn42/" rel="nofollow">dn42</a>, <a href="https://dn42.eu/" rel="nofollow">dn42.eu</a>, <a href="https://dn42.dev/" rel="nofollow">dn42.dev</a></p>
+
+	    </div>
+	  </div>
+
+
+	</div>
+
+
+	<div id="footer" class="pt-4">
+		  <p id="last-edit"><div class="dotted-spinner hidden"></div> <a id="page-info-toggle" data-pagepath="howto/EdgeOS-GRE-IPsec-Example.md">When was this page last modified?</a></p>
+	</div>
+
+
+</div>
+
+<form name="rename" method="POST" action="http://127.0.0.1:4567/gollum/rename/howto/EdgeOS-GRE-IPsec-Example.md">
+  <input type="hidden" name="rename"/>
+  <input type="hidden" name="message"/>
+</form>
+
+</div>
+</div>
+</body>
+
+<!-- Mirrored from 127.0.0.1:4567/howto/EdgeOS-GRE-IPsec-Example by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Aug 2022 13:08:50 GMT -->
+</html>
